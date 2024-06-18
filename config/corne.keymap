@@ -44,33 +44,33 @@
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |   ESC |  1  |  2  |  3  |  4  |  5  |            |     |     |     |     |     | BKSP |
-            // | BTCLR |  6  |  7  |  8  |  9  |  0  |            | LFT | DWN |  UP | RGT | DEl |      |
-            // |  SHFT | BT1 | BT2 | BT3 | BT4 | BT5 |            |     |     |     |     |     |      |
-            //                     | GUI |     | SPC |            | ENT |     | ALT |
+            // |   ESC |  1  |  2  |     3   |  4  |  5  |            |     |     |     |     |     | BKSP |
+            // | BTCLR |  6  |  7  |     8   |  9  |  0  |            | LFT | DWN |  UP | RGT | DEl |      |
+            // |  SHFT | BT1 | BT2 |   BT3   | BT4 | BT5 |            |     |     |     |     |     |      |
+            //                     | LA(TAB) |     | SPC |            | ENT |     | ALT |
 
             display-name = "Lower";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5       &trans    &trans    &trans    &trans     &trans   &kp BSPC
-&kp LSHFT  &kp N6  &kp N7  &kp N8    &kp N9  &kp N0       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp DEL  &trans
-&trans     &trans  &trans  &trans    &trans  &trans       &trans    &trans    &trans    &trans     &trans   &kp TAB
-                           &kp LALT  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
+&kp ESC    &kp N1  &kp N2  &kp N3       &kp N4  &kp N5       &trans    &trans    &trans    &trans     &trans   &kp BSPC
+&kp LSHFT  &kp N6  &kp N7  &kp N8       &kp N9  &kp N0       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp DEL  &trans
+&trans     &trans  &trans  &trans       &trans  &trans       &trans    &trans    &trans    &trans     &trans   &trans
+                           &kp LA(TAB)  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |             |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |             |  +  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |             |  -  |  _  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |             | ENT |     | ALT |
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |             |  ^  |  &  |    *    |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |             |  +  |  =  |    [    |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |             |  -  |  _  |    {    |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |             | ENT |     | RA(TAB) |
 
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
+&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BKSP
 &kp LCTRL  &trans    &trans  &trans    &trans    &trans            &kp PLUS   &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans            &kp MINUS  &kp UNDER   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE         &kp RET    &trans     &kp RALT
+&kp LSHFT  &trans    &trans  &trans    &trans    &trans            &kp MINUS  &kp UNDER  &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+                             &kp LGUI  &trans    &kp SPACE         &kp RET    &trans     &kp RA(TAB)
             >;
         };
 
