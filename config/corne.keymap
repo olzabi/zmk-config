@@ -16,10 +16,10 @@
 / {
     behaviors {
         alt_tabber_macro: alt_tabber_macro {
-            compatible = "zmk,behaviour-macro";
+            compatible = "zmk,behavior-macro";
             label = "Ctrl + Alt + Tab behaviour macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&kp LALT>, <&kp TAB>;
+            bindings = <&kp LCTRL &kp LALT &kp TAB>;
         };
     };
 
