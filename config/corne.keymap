@@ -19,7 +19,7 @@
             compatible = "zmk,behaviour-macro";
             label = "Ctrl + Alt + Tab behaviour macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LALT &kp TAB>
+            bindings = <&kp LCTRL &kp LALT &kp TAB>;
         };
     };
 
