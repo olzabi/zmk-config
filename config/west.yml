@@ -5,7 +5,7 @@ manifest:
     - name: mouse-pr-remote
       url-base: https://github.com/ftc
   projects:
-    - name: mouse-pr-remote
+    - name: zmk
       remote: mouse-pr-remote
       revision: mouse-ftc
       import: app/west.yml
