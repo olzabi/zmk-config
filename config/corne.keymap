@@ -21,15 +21,6 @@
 */
 
 / {
-    conditional_layers {
-      compatible = "zmk,conditional-layers";
-
-      layers {
-        if-layers = <NUMBERS SYMBOLS>;
-        then-layer = <LAYERS>;
-      };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -70,10 +61,10 @@
         numbers {
             display-name = "NUM";
             bindings = <
-&kp ESC    &none   &kp N7  &kp N8           &kp N9  &trans    &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI   &trans  &trans
-&kp LCTRL  &kp N0  &kp N4  &kp N5           &kp N6  &trans    &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &kp DEL  &trans
-&mo FUNK   &none   &kp N1  &kp N2           &kp N3  &trans    &trans      &trans     &trans    &trans     &trans  &trans
-                           &kp LC(LA(TAB))  &trans  &trans    &trans      &trans     &trans
+&kp ESC    &none   &kp N7  &kp N8           &kp N9  &trans    &kp LSHIFT  &kp LCTRL   &kp LALT  &kp LGUI   &trans   &trans
+&kp LCTRL  &kp N0  &kp N4  &kp N5           &kp N6  &trans    &kp LEFT    &kp DOWN    &kp UP    &kp RIGHT  &kp DEL  &trans
+&mo FUNK   &none   &kp N1  &kp N2           &kp N3  &trans    &trans      &trans      &trans    &trans     &trans   &trans
+                           &kp LC(LA(TAB))  &trans  &trans    &trans      &mo LAYERS  &trans
             >;
         };
 

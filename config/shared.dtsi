@@ -47,15 +47,6 @@
 };
 
 / {
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-
-    layers {
-      if-layers = <3 4>;
-      then-layer = <0>;
-    };
-  };
-
   behaviors {};
   combos {
     compatible = "zmk,combos";
