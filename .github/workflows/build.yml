@@ -1,11 +1,6 @@
 # name: 'Build Corne 3x6 nice!view nice!nano Firmware'
 name: Test Corne 3x6 nice!view nice!nano
-on:
-  workflow_dispatch:
-  push:
-    paths:
-      - 'config/west.yml'
-      - 'config/shared.dtsi'
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
