@@ -21,6 +21,15 @@
 */
 
 / {
+    conditional_layers {
+      compatible = "zmk,conditional-layers";
+
+      layers {
+        if-layers = <NUMBERS SYMBOLS>;
+        then-layer = <LAYERS>;
+      };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -61,9 +70,9 @@
         numbers {
             display-name = "NUM";
             bindings = <
-&kp ESC    &none   &kp N7  &kp N8           &kp N9  &trans    &trans      &trans     &trans    &trans    &trans  &trans
-&kp LCTRL  &kp N0  &kp N4  &kp N5           &kp N6  &trans    &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans  &trans
-&mo FUNK   &none   &kp N1  &kp N2           &kp N3  &trans    &trans      &trans     &trans    &trans    &trans  &trans
+&kp ESC    &none   &kp N7  &kp N8           &kp N9  &trans    &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI   &trans  &trans
+&kp LCTRL  &kp N0  &kp N4  &kp N5           &kp N6  &trans    &kp LEFT    &kp DOWN   &kp UP    &kp RIGHT  &kp DEL  &trans
+&mo FUNK   &none   &kp N1  &kp N2           &kp N3  &trans    &trans      &trans     &trans    &trans     &trans  &trans
                            &kp LC(LA(TAB))  &trans  &trans    &trans      &trans     &trans
             >;
         };
@@ -83,10 +92,10 @@
         funk {
             display-name = "FUNK";
             bindings = <
-&trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans    &trans  &trans      &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans  &kp LSHIFT  &kp LCTRL  &kp LALT  &kp LGUI  &trans
-&trans  &kp F12  &kp F1  &kp F2  &kp F3  &trans    &trans  &trans      &trans     &kp RALT  &trans    &trans
-                         &trans  &trans  &trans    &trans  &trans      &trans
+&trans  &kp F10  &kp F7  &kp F8  &kp F9  &trans    &kp C_PREV  &kp C_STOP  &kp C_PLAY  &kp C_NEXT  &kp C_MUTE  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans    &trans      &kp LSHIFT  &kp LCTRL   &kp LALT    &kp LGUI    &trans
+&trans  &kp F12  &kp F1  &kp F2  &kp F3  &trans    &trans      &trans      &trans      &kp RALT    &trans      &trans
+                         &trans  &trans  &trans    &trans      &trans      &trans
             >;
         };
 
