@@ -51,8 +51,8 @@
     compatible = "zmk,conditional-layers";
 
     layers {
-      if-layers = <NUMBERS SYMBOLS>;
-      then-layer = <LAYERS>;
+      if-layers = <3 4>;
+      then-layer = <0>;
     };
   };
 
