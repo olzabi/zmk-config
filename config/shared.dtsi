@@ -57,6 +57,13 @@
       bindings = <&kp T &kp E &kp S &kp T>;
       layers = <TEST>;
     };
+
+    combo_layers {
+      timeout-ms = <30>;
+      key-positions = <2 3 17>;
+      bindings = <&tog LAYERS>;
+      layers = <NUMBERS>;
+    };
   };
   macros {};
 };
