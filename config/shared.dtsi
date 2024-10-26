@@ -51,13 +51,22 @@
     compatible = "zmk,conditional-layers";
 
     layers {
-      if-layers = <36 37 40 41>;
+      if-layers = <NUMBERS SYMBOLS>;
       then-layer = <LAYERS>;
     };
   };
 
   behaviors {};
-  combos {};
+  combos {
+    compatible = "zmk,combos";
+
+    combo_test {
+      timeout-ms = <30>;
+      key-positions = <2 3 17>;
+      bindings = <&kp T &kp E &kp S &kp T>;
+      layers = <TEST>;
+    }
+  };
   macros {};
 };
 
