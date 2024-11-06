@@ -1,2 +1,16 @@
 .idea
 .vscode
+.west
+.venv
+.direnv
+.build
+.editorconfig
+
+*.utf2
+
+firmware
+bootloader
+build/
+modules/
+tools/
+zmk/
