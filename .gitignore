@@ -14,3 +14,5 @@ build/
 modules/
 tools/
 zmk/
+zephyr/
+
