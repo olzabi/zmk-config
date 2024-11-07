@@ -1,5 +1,5 @@
 #define DEF_LAYERS  0 1 2
-#define DEF_TIMEOUT 40
+#define DEF_TIMEOUT 30
 
 / {
   combos {
@@ -219,7 +219,7 @@
     change_lang {
       bindings = <&kp LG(SPACE)>;
       timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <15 16 19 20>;
+      key-positions = <38 39>;
       layers = <DEF_LAYERS 3 4 5>;
     };
 
