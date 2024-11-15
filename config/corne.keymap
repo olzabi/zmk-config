@@ -130,8 +130,8 @@
             bindings = <
 &trans &trans    &trans   &trans    &trans     &trans       &trans          &trans        &trans          &trans           &trans  &trans
 &trans &kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans       &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans &trans    &kp RALT &trans    &trans     &trans       &trans          &trans        &trans          &trans           &trans  &trans
-                          &trans    &trans     &mkp LCLK    &mkp RCLK       &trans        &trans
+&trans &trans    &kp RALT &trans    &mkp LCLK  &mkp RCLK    &trans          &trans        &trans          &trans           &trans  &trans
+                          &trans    &trans     &trans       &trans          &trans        &trans
             >;
         };
     };
