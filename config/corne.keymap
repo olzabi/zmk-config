@@ -25,17 +25,18 @@
     keymap {
         compatible = "zmk,keymap";
 
-        /* QWERTY 1 */
+        /* LAYOUT 1 */
         qwerty {
             display-name = "DEF";
             bindings = <
-&kp   TAB  &kp Q  &kp W  &kp    E  &kp       R  &kp     T         &kp     Y      &kp  U  &kp     I  &kp   O  &kp    P  &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp    D  &kp       F  &kp     G         &kp     H      &kp  J  &kp     K  &kp   L  &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp    C  &kp       V  &kp     B         &kp     N      &kp  M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo NUMBERS  &lt FUNK SPACE    &lt MOUSE RET  &trans  &kp RALT
+&kp   TAB  &kp Q  &kp W  &kp    E  &kp       R  &kp     T         &kp     Y      &kp  U      &kp     I  &kp   O  &kp    P  &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp    D  &kp       F  &kp     G         &kp     H      &kp  J      &kp     K  &kp   L  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp    C  &kp       V  &kp     B         &kp     N      &kp  M      &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo NUMBERS  &lt FUNK SPACE    &lt MOUSE RET  &to LAYERS  &kp RALT
             >;
         };
 
+        /* LAYOUT 2 */
         dvorak {
             display-name = "Dvorak";
             bindings = <
@@ -46,6 +47,7 @@
             >;
         };
 
+        /* LAYOUT 3 */
         canary {
             display-name = "Canary";
             bindings = <
@@ -56,12 +58,12 @@
             >;
         };
 
-        /* GAMES 2 */
+        /* GAMES 3 */
         gam {
             display-name = "Gam";
             bindings = <
 &trans  &kp Q  &kp W  &kp    E     &kp    R     &kp     T    &kp   Y  &kp       U  &kp     I  &kp   O  &kp    P  &trans
-&trans  &kp A  &kp S  &kp    D     &kp    F     &kp     G    &kp   H  &kp       J  &kp     K  &kp   L  &kp SEMI  &trans
+&trans  &kp A  &kp S  &kp    D     &kp    F     &kp     G    &kp   H  &kp       J  &kp     K  &kp   L  &kp SEMI  &to LAYERS
 &trans  &kp Z  &kp X  &kp    C     &kp    V     &kp     B    &kp   N  &kp       M  &kp COMMA  &kp DOT  &kp FSLH  &trans
                       &kp LGUI     &mo GAM_NUM  &kp SPACE    &kp RET  &mo GAM_ARR  &kp  RALT
             >;
@@ -71,25 +73,25 @@
         numbers {
             display-name = "Num";
             bindings = <
-&kp   ESC  &none   &kp N1  &kp          N2  &kp N3  &trans    &kp LSHIFT  &kp LCTRL  &kp LALT  &kp  LGUI  &trans   &trans
-&kp LCTRL  &kp N0  &kp N4  &kp          N5  &kp N6  &trans    &kp   LEFT  &kp  DOWN  &kp   UP  &kp RIGHT  &kp DEL  &trans
-&mo FUNK   &none   &kp N7  &kp          N8  &kp N9  &trans    &trans      &trans     &trans    &trans     &trans   &trans
+&kp   ESC  &kp N1  &kp N2  &kp          N3  &kp N4  &kp N5    &kp LSHIFT  &kp LCTRL  &kp LALT  &kp  LGUI  &trans   &trans
+&kp LCTRL  &kp N6  &kp N7  &kp          N8  &kp N9  &kp N0    &kp   LEFT  &kp  DOWN  &kp   UP  &kp RIGHT  &kp DEL  &trans
+&mo FUNK   &none   &trans  &trans           &trans  &trans    &trans      &trans     &trans    &trans     &trans   &trans
                            &kp LC(LA(TAB))  &trans  &trans    &trans      &trans     &trans
             >;
         };
 
-        /* FUNK 6 */
+        /* FUNK 5 */
         funk {
-            display-name = "Funk";
+            display-name = "Funkee";
             bindings = <
-&trans  &trans  &kp F10  &kp F1  &kp F2  &kp F3    &kp   C_PREV  &kp C_STOP  &kp C_PLAY  &kp C_NEXT  &kp C_MUTE  &trans
-&trans  &trans  &kp F11  &kp F4  &kp F5  &kp F6    &kp C_VOL_UP  &kp LSHIFT  &kp  LCTRL  &kp   LALT  &kp   LGUI  &trans
-&trans  &trans  &kp F12  &kp F7  &kp F8  &kp F9    &kp C_VOL_DN  &none       &none       &kp   RALT  &none       &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp   C_PREV  &kp C_STOP  &kp C_PLAY  &kp C_NEXT  &kp C_MUTE  &trans
+&trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp C_VOL_UP  &kp LSHIFT  &kp  LCTRL  &kp   LALT  &kp   LGUI  &trans
+&trans  &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &kp C_VOL_DN  &none       &none       &kp   RALT  &none       &trans
                          &trans  &trans  &trans    &trans        &trans      &trans
             >;
         };
 
-        /* LAYERS 0 */
+        /* LAYERS 6 */
         layers {
             display-name = "Layers";
             bindings = <
@@ -100,7 +102,7 @@
             >;
         };
 
-        /* GAMES_NUMBERS */
+        /* GAMES_NUMBERS 7 */
         gam_num {
             display-name = "Gam Num";
             bindings = <
@@ -111,7 +113,7 @@
             >;
         };
 
-        /* GAMES_ARR */
+        /* GAMES_ARR 8 */
         gam_arr {
             display-name = "Gam Arr";
             bindings = <
