@@ -1,0 +1,229 @@
+#define DEF_LAYERS  0 1 2
+#define DEF_TIMEOUT 30
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+    /* Basic combos */
+
+    lpar {
+      bindings = <&kp LPAR>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <4 5>;
+      layers = <DEF_LAYERS>;
+    };
+
+    rpar {
+      bindings = <&kp RPAR>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <6 7>;
+      layers = <DEF_LAYERS>;
+    };
+
+    lbrc {
+      bindings = <&kp LBRC>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <16 5>;
+      layers = <DEF_LAYERS>;
+    };
+
+    rbrc {
+      bindings = <&kp RBRC>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <6 19>;
+      layers = <DEF_LAYERS>;
+    };
+
+    lbkt {
+      bindings = <&kp LBKT>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <17 5>;
+      layers = <DEF_LAYERS>;
+    };
+
+    rbkt {
+      timeout-ms = <DEF_TIMEOUT>;
+      bindings = <&kp RBKT>;
+      key-positions = <6 18>;
+      layers = <DEF_LAYERS>;
+    };
+
+    plus  {
+      bindings = <&kp PLUS>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <17 18>;
+      layers = <DEF_LAYERS>;
+    };
+
+    minus {
+      bindings = <&kp MINUS>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <29 30>;
+      layers = <DEF_LAYERS>;
+    };
+
+    // ---
+    // excl  {
+    //   bindings = <&kp EXCL>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <5 17>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // at    {
+    //   bindings = <&kp AT>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <16 17>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // hash  {
+    //   bindings = <&kp HASH>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <17 29>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // dllr  {
+    //   bindings = <&kp DLLR>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <6 18>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // prcnt {
+    //   bindings = <&kp PRCNT>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <7 18>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // caret {
+    //   bindings = <&kp CARET>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <18 19>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // amps  {
+    //   bindings = <&kp AMPS>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <18 30>;
+    //   layers = <DEF_LAYERS>;
+    // };
+    // astrk {
+    //   bindings = <&kp KP_MULTIPLY>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <18 31>;
+    //   layers = <DEF_LAYERS>;
+    // };
+
+    equal {
+      bindings = <&kp EQUAL>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <5 6>;
+      layers = <DEF_LAYERS>;
+    };
+
+    under {
+      bindings = <&kp UNDER>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <30 31>;
+      layers = <DEF_LAYERS>;
+    };
+
+    tilde {
+      bindings = <&kp TILDE>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <10 11>;
+      layers = <DEF_LAYERS>;
+    };
+
+    tilde_sec {
+      bindings = <&kp TILDE>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <25 26>;
+      layers = <DEF_LAYERS>;
+    };
+
+    pipe {
+      bindings = <&kp PIPE>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <10 1>;
+      layers = <DEF_LAYERS>;
+    };
+
+    grve {
+      bindings = <&kp GRAVE>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <22 23>;
+      layers = <DEF_LAYERS>;
+    };
+
+    lt {
+      bindings = <&kp LT>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <33 26>;
+      layers = <DEF_LAYERS>;
+    };
+
+    gt {
+      bindings = <&kp GT>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <34 25>;
+      layers = <DEF_LAYERS>;
+    };
+
+    fslh {
+      bindings = <&kp FSLH>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <14 25>;
+      layers = <DEF_LAYERS>;
+    };
+
+    bslh {
+      bindings = <&kp BSLH>;
+      timeout-ms = <DEF_TIMEOUT>;
+      key-positions = <21 34>;
+      layers = <DEF_LAYERS>;
+    };
+
+    // copy_win {
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <38 5>;
+    //   bindings = <&kp LC(C)>;
+    //   layers = <DEF_LAYERS>;
+    // };
+
+    // paste_win {
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <38 4>;
+    //   bindings = <&kp LC(V)>;
+    //   layers = <DEF_LAYERS>;
+    // };
+
+    // cut_win {
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <38 29>;
+    //   bindings = <&kp LC(X)>;
+    //   layers = <DEF_LAYERS>;
+    // };
+
+    // undo_win {
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <38 16>;
+    //   bindings = <&kp LC(Z)>;
+    //   layers = <DEF_LAYERS>;
+    // };
+
+    /* Custom Combos */
+    // change_lang {
+    //   bindings = <&kp LG(SPACE)>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <38 39>;
+    //   layers = <DEF_LAYERS 3 4 5>;
+    // };
+
+    // tog_layers {
+    //   bindings = <&tog LAYERS>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <37 38 39 40>;
+    //   layers = <DEF_LAYERS 3 4 5 6 7 8 9>;
+    // };
+  };
+};

@@ -1,0 +1,104 @@
+/* Key Positions
+╭────────────────────────╮ ╭────────────────────────╮
+│  0   1   2   3   4   5 │ │  6   7   8   9  10  11 │
+│ 12  13  14  15  16  17 │ │ 18  19  20  21  22  23 │
+│ 24  25  26  27  28  29 │ │ 30  31  32  33  34  35 │
+╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
+            ╰────────────╯ ╰────────────╯
+*/
+
+#define KEYS_L  0 1 2 3 4 5    12 13 14 15 16 17  24 25 26 27 28 29
+#define KEYS_R  6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35
+#define KEYS_T  36 37 38 39 40 41
+
+#define HRM_TAPPING_TERM      280
+#define HRM_TAPPING_TERM_FAST 200
+#define HRM_QUICK_TAP         175
+#define HRM_PRIOR_IDLE        150
+
+// #define DEF       0
+#define QWERTY    0 // aka default layer while completely not switched to dvorak
+#define DVORAK    1
+#define CANARY    2
+#define GAM_DEF   3
+#define NUMBERS   4
+#define FUNK      5
+#define LAYERS    6
+#define GAM_NUM   7
+#define GAM_ARR   8
+#define MOUSE     9
+
+&mmv {
+  time-to-max-speed-ms = <300>;
+  acceleration-exponent = <1>;
+  delay-ms = <0>;
+};
+
+&mmv_input_listener {
+  scale-multiplier = <2>;
+};
+
+&mt {
+  tapping-term-ms = <200>;
+  quick_tap_ms = <0>;
+  flavor = "tap-preferred";
+};
+
+&lt {
+  tapping-term-ms = <200>;
+  quick_tap_ms = <0>;
+  flavor = "tap-preferred";
+};
+
+&sk {
+  release-after-ms = <500>;
+  quick-release;
+};
+
+/ {
+  behaviors {
+    hml: homerow_mods_left {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+
+      flavor = "balanced";
+      tapping-term-ms = <HRM_TAPPING_TERM>;
+      quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
+      require-prior-idle-ms = <HRM_PRIOR_IDLE>;
+      hold-trigger-key-positions = <KEYS_L KEYS_T>;
+      hold-trigger-on-release;
+    };
+
+    hmr: homerow_mods_right {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+
+      flavor = "balanced";
+      tapping-term-ms = <HRM_TAPPING_TERM>;
+      quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
+      require-prior-idle-ms = <HRM_PRIOR_IDLE>;
+      hold-trigger-key-positions = <KEYS_R KEYS_T>;
+      hold-trigger-on-release;
+    };
+
+    td: tapdance {
+      compatible = "zmk,behavior-hold-tap";
+      label = "TAPDANCE";
+      #binding-cells = <2>;
+      tapping-term-ms = <190>;
+      quick-tap-ms = <250>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
+};
+
+// ---
+// for 40 41 combo hold can be used 8 9 20 21
+// for 36 37 combo hold can be used 12 24 2 3 14 15
+// ---
+// default layer to switch essential layer or switch bt profile
+//
+// ---
