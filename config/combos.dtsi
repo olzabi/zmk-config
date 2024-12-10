@@ -7,61 +7,61 @@
 
     /* Basic combos */
 
-    lpar {
-      bindings = <&kp LPAR>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <4 5>;
-      layers = <DEF_LAYERS>;
-    };
+    // lpar {
+    //   bindings = <&kp LPAR>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <4 5>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    rpar {
-      bindings = <&kp RPAR>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <6 7>;
-      layers = <DEF_LAYERS>;
-    };
+    // rpar {
+    //   bindings = <&kp RPAR>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <6 7>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    lbrc {
-      bindings = <&kp LBRC>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <16 5>;
-      layers = <DEF_LAYERS>;
-    };
+    // lbrc {
+    //   bindings = <&kp LBRC>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <16 5>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    rbrc {
-      bindings = <&kp RBRC>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <6 19>;
-      layers = <DEF_LAYERS>;
-    };
+    // rbrc {
+    //   bindings = <&kp RBRC>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <6 19>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    lbkt {
-      bindings = <&kp LBKT>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <17 5>;
-      layers = <DEF_LAYERS>;
-    };
+    // lbkt {
+    //   bindings = <&kp LBKT>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <17 5>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    rbkt {
-      timeout-ms = <DEF_TIMEOUT>;
-      bindings = <&kp RBKT>;
-      key-positions = <6 18>;
-      layers = <DEF_LAYERS>;
-    };
+    // rbkt {
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   bindings = <&kp RBKT>;
+    //   key-positions = <6 18>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    plus  {
-      bindings = <&kp PLUS>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <17 18>;
-      layers = <DEF_LAYERS>;
-    };
+    // plus  {
+    //   bindings = <&kp PLUS>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <17 18>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    minus {
-      bindings = <&kp MINUS>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <29 30>;
-      layers = <DEF_LAYERS>;
-    };
+    // minus {
+    //   bindings = <&kp MINUS>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <29 30>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
     // ---
     // excl  {
@@ -113,75 +113,75 @@
     //   layers = <DEF_LAYERS>;
     // };
 
-    equal {
-      bindings = <&kp EQUAL>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <5 6>;
-      layers = <DEF_LAYERS>;
-    };
+    // equal {
+    //   bindings = <&kp EQUAL>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <5 6>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    under {
-      bindings = <&kp UNDER>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <30 31>;
-      layers = <DEF_LAYERS>;
-    };
+    // under {
+    //   bindings = <&kp UNDER>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <30 31>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    tilde {
-      bindings = <&kp TILDE>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <10 11>;
-      layers = <DEF_LAYERS>;
-    };
+    // tilde {
+    //   bindings = <&kp TILDE>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <10 11>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    tilde_sec {
-      bindings = <&kp TILDE>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <25 26>;
-      layers = <DEF_LAYERS>;
-    };
+    // tilde_sec {
+    //   bindings = <&kp TILDE>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <25 26>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    pipe {
-      bindings = <&kp PIPE>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <10 1>;
-      layers = <DEF_LAYERS>;
-    };
+    // pipe {
+    //   bindings = <&kp PIPE>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <10 1>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    grve {
-      bindings = <&kp GRAVE>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <22 23>;
-      layers = <DEF_LAYERS>;
-    };
+    // grve {
+    //   bindings = <&kp GRAVE>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <22 23>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    lt {
-      bindings = <&kp LT>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <33 26>;
-      layers = <DEF_LAYERS>;
-    };
+    // lt {
+    //   bindings = <&kp LT>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <33 26>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    gt {
-      bindings = <&kp GT>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <34 25>;
-      layers = <DEF_LAYERS>;
-    };
+    // gt {
+    //   bindings = <&kp GT>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <34 25>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    fslh {
-      bindings = <&kp FSLH>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <14 25>;
-      layers = <DEF_LAYERS>;
-    };
+    // fslh {
+    //   bindings = <&kp FSLH>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <14 25>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
-    bslh {
-      bindings = <&kp BSLH>;
-      timeout-ms = <DEF_TIMEOUT>;
-      key-positions = <21 34>;
-      layers = <DEF_LAYERS>;
-    };
+    // bslh {
+    //   bindings = <&kp BSLH>;
+    //   timeout-ms = <DEF_TIMEOUT>;
+    //   key-positions = <21 34>;
+    //   layers = <DEF_LAYERS>;
+    // };
 
     // copy_win {
     //   timeout-ms = <DEF_TIMEOUT>;

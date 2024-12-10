@@ -27,6 +27,7 @@
 #define GAM_NUM   7
 #define GAM_ARR   8
 #define MOUSE     9
+#define SYMB     10
 
 &mmv {
   time-to-max-speed-ms = <300>;
