@@ -117,10 +117,10 @@
         gam_arr {
             display-name = "Gam Arr";
             bindings = <
-&kp   ESC  &trans  &trans  &trans  &trans      &trans    &trans    &trans    &trans    &trans  &trans  &kp     BSPC
-&kp LCTRL  &trans  &trans  &trans  &trans      &trans    &trans    &kp   UP  &trans    &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans      &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans  &trans  &trans
-                           &trans  &to LAYERS  &trans    &kp  RET  &trans    &kp  RALT
+&kp   ESC  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans    &trans     &trans  &kp  BSPC
+&kp LCTRL  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &kp   UP  &trans     &trans  &trans
+&trans     &trans  &trans  &trans  &trans  &trans    &trans    &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
+                           &trans  &trans  &trans    &kp  RET  &trans    &to LAYERS
             >;
         };
 
@@ -128,9 +128,9 @@
         mouse {
             display-name = "Mouse";
             bindings = <
-&trans &trans    &trans   &trans    &trans     &trans    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans  &trans  &trans
-&trans &kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans  &trans
-&trans &trans    &kp RALT &trans    &trans     &trans    &trans          &trans          &trans           &trans  &trans  &trans
+&trans &trans    &trans   &trans    &trans     &trans    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCRL_UP   &trans  &trans
+&trans &kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN &trans  &trans
+&trans &trans    &kp RALT &trans    &trans     &trans    &trans          &trans          &trans           &kp  LCTRL     &trans  &trans
                           &trans    &trans     &trans    &trans          &trans          &trans
             >;
         };
