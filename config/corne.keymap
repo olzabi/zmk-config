@@ -141,6 +141,4 @@
                           &trans    &trans     &trans    &to LAYERS &trans    &kp RA(TAB)
             >;
         };
-
-    };
 };
