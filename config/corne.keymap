@@ -138,9 +138,9 @@
         symb {
             display-name = "Symb";
             bindings = <
-&trans &trans    &trans   &trans    &trans     &trans    &kp PLUS   &kp LPAR  &kp RPAR  &trans   &kp PIPE  &trans
-&trans &kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans    &kp EQUAL  &kp MINUS &trans    &kp LBKT &kp RBKT  &kp GRAVE
-&trans &kp TILDE &kp RALT &trans    &trans     &trans    &kp UNDER  &kp LBRC  &kp RBRC  &trans   &kp BSLH  &kp TILDE
+&trans &trans    &trans   &trans    &trans     &trans    &kp EQUAL  &trans    &kp LPAR  &kp RPAR &kp PIPE  &trans
+&trans &kp LGUI  &kp LALT &kp LCTRL &kp LSHIFT &trans    &kp PLUS   &kp MINUS &kp LBKT  &kp RBKT &trans    &kp GRAVE
+&trans &kp TILDE &kp RALT &trans    &trans     &trans    &kp UNDER  &trans    &kp LBRC  &kp RBRC &kp BSLH  &kp TILDE
                           &trans    &trans     &trans    &to LAYERS &trans    &kp RA(TAB)
             >;
         };
