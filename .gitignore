@@ -5,10 +5,11 @@
 .direnv
 .build
 .editorconfig
+.cache/
 
 *.utf2
 
-firmware
+firmware/
 bootloader
 build/
 modules/
@@ -16,3 +17,12 @@ tools/
 zmk/
 zephyr/
 
+# c, cpp
+*.x
+*.d
+*.dSYM
+*.o
+*.out
+
+
+!zephyr/module.yml

@@ -17,7 +17,7 @@
 #define HRM_PRIOR_IDLE        150
 
 // #define DEF       0
-#define QWERTY    0 // aka default layer while completely not switched to dvorak
+#define QWERTY    0 // a.k.a default
 #define DVORAK    1
 #define CANARY    2
 #define GAM_DEF   3
@@ -29,21 +29,7 @@
 #define MOUSE     9
 #define SYMB     10
 
-&mmv {
-  time-to-max-speed-ms = <250>;
-  acceleration-exponent = <1>;
-  delay-ms = <0>;
-};
-
-&msc {
-  time-to-max-speed-ms = <300>;
-  acceleration-exponent = <1>;
-  delay-ms = <0>;
-};
-
-&mmv_input_listener {
-  scale-multiplier = <2>;
-};
+#define HUH LS(LC(LALT)) // ctrl+shift+alt
 
 &mt {
   tapping-term-ms = <200>;
