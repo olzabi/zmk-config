@@ -16,7 +16,7 @@
 #define HRM_QUICK_TAP         175
 #define HRM_PRIOR_IDLE        150
 
-// #define DEF       0
+// layers
 #define QWERTY    0 // a.k.a default
 #define DVORAK    1
 #define CANARY    2
@@ -30,6 +30,23 @@
 #define SYMB     10
 
 #define HUH LS(LC(LALT)) // ctrl+shift+alt
+
+// keys
+
+#define CA_TAB LC(LA(TAB))
+
+#define HML_A none  none
+#define HML_S LALT  S
+#define HML_D LCTRL D
+#define HML_F LSHFT F
+
+#define HMR_J    RSHFT J
+#define HMR_K    RCTRL K
+#define HMR_L    RALT  L
+#define HMR_SEMI GUI   SEMI
+
+#define T_RT FUNK  SPACE
+#define T_LT MOUSE RET
 
 &mt {
   tapping-term-ms = <200>;
