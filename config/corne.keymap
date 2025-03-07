@@ -30,9 +30,9 @@
         qwerty {
             display-name = "DEF";
             bindings = <
-&kp   TAB  &kp Q  &kp W      &kp E      &kp R       &kp T       &kp Y  &kp  U     &kp I      &kp O      &kp P         &kp BSPC
-&kp LCTRL  &kp A  &hml HML_S &hml HML_D &hml HML_F  &kp G       &kp H  &hmr HMR_J &hmr HMR_K &hmr HMR_L &hmr HMR_SEMI &kp SQT
-&kp LSHFT  &kp Z  &kp X      &kp C      &kp V       &kp B       &kp N  &kp  M     &kp COMMA  &kp DOT    &kp FSLH      &kp ESC
+&kp   TAB  &kp Q  &kp W      &kp E      &kp R       &kp T      &kp Y   &kp  U     &kp I      &kp O      &kp P         &kp BSPC
+&kp LCTRL  &kp A  &hml HML_S &hml HML_D &hml HML_F  &kp G      &kp H   &hmr HMR_J &hmr HMR_K &hmr HMR_L &hmr HMR_SEMI &kp SQT
+&kp LSHFT  &kp Z  &kp X      &kp C      &kp V       &kp B      &kp N   &kp  M     &kp COMMA  &kp DOT    &kp FSLH      &kp ESC
                              &kp LGUI   &mo NUMBERS &lt T_R    &lt T_L &mo SYMB   &kp RALT
             >;
         };
