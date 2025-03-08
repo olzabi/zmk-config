@@ -51,7 +51,7 @@
 #define T_R FUNK  SPACE
 
 // Game(Gam/G) Thumb Left/Mid/Right
-#define GAM_T_M gamlt GAM_NUM TAB
+#define GAM_T_M GAM_NUM TAB
 
 &mt {
   tapping-term-ms = <200>;
@@ -60,9 +60,8 @@
 };
 
 &lt {
-  tapping-term-ms = <300>;
-  quick_tap_ms = <0>;
-  flavor = "tap-preferred";
+  tapping-term-ms = <350>;
+  quick_tap_ms = <50>;
 };
 
 &sk {
@@ -98,16 +97,6 @@
       hold-trigger-on-release;
     };
 
-    gamlt: layer_tap_hold_preferred {
-      compatible = "zmk,behaviour-hold-tap";
-      #binding-cells = <2>;
-
-      flavor = "hold-preferred";
-      tapping-term-ms = <300>;
-      bindings =
-        <&mo>,
-        <&kp>;
-    };
   };
 };
 
