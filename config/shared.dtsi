@@ -60,8 +60,8 @@
 };
 
 &lt {
-  tapping-term-ms = <350>;
-  quick_tap_ms = <50>;
+  tapping-term-ms = <250>;
+  quick_tap_ms = <0>;
 };
 
 &sk {
