@@ -51,7 +51,8 @@
 #define T_R FUNK  SPACE
 
 // Game(Gam/G) Thumb Left/Mid/Right
-#define GAM_T_M GAM_NUM TAB
+// #define GAM_T_M GAM_NUM TAB
+#define GAM_T_M GAM_NUM GRAVE
 
 &mt {
   tapping-term-ms = <200>;
@@ -60,9 +61,9 @@
 };
 
 &lt {
-  tapping-term-ms = <300>;
+  tapping-term-ms = <250>;
   quick_tap_ms = <0>;
-  flavor = "tap-preferred";
+  flavor = "hold-preferred";
 };
 
 &sk {
@@ -98,10 +99,10 @@
       hold-trigger-on-release;
     };
 
-    alt_gui: right_alt_gui {
+    alt_gui: alt_gui {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
-      bindings = <&kp RALT>, <&kp LGUI>;
+      bindings = <&kp LALT>, <&kp LGUI>;
 
       tapping-term-ms = <200>;
     };

@@ -85,10 +85,10 @@
         funk {
             display-name = "Funkee";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp C_MUTE   &none  &none  &none  &none  &trans
-&trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp C_VOL_UP &none  &none  &none  &none  &trans
-&trans  &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &kp C_VOL_DN &none  &none  &none  &none  &trans
-                         &trans  &trans  &trans    &kp C_PLAY   &trans &trans
+&trans &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp C_MUTE   &none  &none  &none  &none  &trans
+&trans &kp F6  &kp F7  &kp F8  &kp F9  &kp F10    &kp C_VOL_UP &none  &none  &none  &none  &trans
+&trans &kp F11 &kp F12 &kp F13 &kp F14 &kp F15    &kp C_VOL_DN &none  &none  &none  &none  &trans
+                       &trans  &trans  &trans     &kp C_PLAY   &trans &trans
             >;
         };
 
@@ -107,10 +107,10 @@
         gam_num {
             display-name = "Gam Num";
             bindings = <
-&kp LALT  &kp N1 &kp N2 &kp N3   &kp N4 &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
-&kp LSHFT &trans &trans &trans   &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DEL &trans
-&kp ESC   &trans &trans &trans   &trans &trans    &trans   &trans   &trans &trans    &trans  &trans
-                        &kp LGUI &trans &trans    &trans   &trans   &trans
+&trans    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5    &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+&kp LSHFT &trans &trans &trans &trans &trans    &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp DEL &trans
+&kp ESC   &trans &trans &trans &trans &trans    &trans   &trans   &trans &trans    &trans  &trans
+                        &trans &trans &trans    &trans   &mo SYMB &trans
             >;
         };
 
@@ -141,8 +141,8 @@
             display-name = "Symb";
             bindings = <
 &trans &kp EXCL  &kp AT   &kp HASH        &kp DLLR &kp PRCNT    &to LAYERS &none     &kp LPAR &kp RPAR &kp PIPE &trans
-&trans &kp CARET &kp AMPS &kp KP_MULTIPLY &none    &none        &kp EQUAL  &kp MINUS &kp LBKT &kp RBKT &trans   &kp GRAVE
-&trans &kp TILDE &trans   &trans          &kp LT   &kp GT       &kp UNDER  &kp PLUS  &kp LBRC &kp RBRC &kp BSLH &kp TILDE
+&trans &kp CARET &kp AMPS &kp KP_MULTIPLY &none    &none        &kp EQUAL  &kp PLUS  &kp LBKT &kp RBKT &trans   &kp GRAVE
+&trans &kp TILDE &trans   &trans          &kp LT   &kp GT       &kp UNDER  &kp MINUS &kp LBRC &kp RBRC &kp BSLH &kp TILDE
                           &trans          &trans   &trans       &to LAYERS &trans    &kp RA(TAB)
             >;
         };
