@@ -19,7 +19,7 @@
 // layers
 #define QWERTY    0 // a.k.a default
 #define DVORAK    1
-#define CANARY    2
+#define COLEMAK   2
 #define GAM_DEF   3
 #define NUMBERS   4
 #define FUNK      5
