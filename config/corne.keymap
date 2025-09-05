@@ -133,14 +133,14 @@
 //    ┌──────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬─────┬─────┬─────┬─────┬─────┐
 //    │ mute │ f1  │ f2  │ f3  │ f4  │ f5  │   │      │     │     │     │     │     │
 //    ├──────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼─────┼─────┼─────┼─────┼─────┤
-//    │      │ f6  │ f7  │ f8  │ f9  │ f10 │   │      │     │     │     │     │     │
+//    │ ent  │ f6  │ f7  │ f8  │ f9  │ f10 │   │      │     │     │     │     │     │
 //    ├──────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼─────┼─────┼─────┼─────┼─────┤
 //    │ play │ f11 │ f12 │ f13 │ f14 │ f15 │   │ vold │     │     │     │     │     │
 //    └──────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼─────┼─────┼─────┴─────┴─────┘
 //                       │     │     │     │   │ volu │     │     │
 //                       └─────┴─────┴─────┘   └──────┴─────┴─────┘
   &kp C_MUTE   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5        &none          &none    &none    &none   &none   &trans
-  &trans       &kp F6    &kp F7    &kp F8    &kp F9    &kp F10       &none          &none    &none    &none   &none   &trans
+  &kp RET      &kp F6    &kp F7    &kp F8    &kp F9    &kp F10       &none          &none    &none    &none   &none   &trans
   &kp C_PLAY   &kp F11   &kp F12   &kp F13   &kp F14   &kp F15       &kp C_VOL_DN   &none    &none    &none   &none   &trans
                                    &trans    &trans    &trans        &kp C_VOL_UP   &trans   &trans
             >;
