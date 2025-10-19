@@ -20,14 +20,27 @@
 #define QWERTY    0 // a.k.a default
 #define DVORAK    1
 #define COLEMAK   2
+
+// #define NUMBERS   4
+// #define FUNK      5
+// #define LAYERS    6
+// #define GAM_NUM   7
+// #define GAM_ARR   8
+// #define MOUSE     9
+// #define SYMB     10
+
 #define GAM_DEF   3
-#define NUMBERS   4
-#define FUNK      5
-#define LAYERS    6
-#define GAM_NUM   7
-#define GAM_ARR   8
-#define MOUSE     9
-#define SYMB     10
+#define GAM_NUM   4
+// #define GAM_ARR   5
+
+#define NUMBERS   5
+#define SYMB     9
+
+#define FUNK      6
+#define MOUSE     8
+
+#define LAYERS    7
+#define WINDOWS  10
 
 #define HUH LS(LC(LALT)) // ctrl+shift+alt
 
