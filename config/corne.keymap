@@ -115,13 +115,13 @@
 //    ├─────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
 //    │  lsft   │ lctl(A) │     │     │ lctl(F) │     │   │ left │ down │  up  │ rght │ del │      │
 //    ├─────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//    │   esc   │ lctl(Z) │     │     │ lctl(V) │     │   │      │ left │ down │ rght │     │      │
+//    │   esc   │         │     │     │ lctl(V) │     │   │      │ left │ down │ rght │     │      │
 //    └─────────┴─────────┴─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┴─────┴──────┘
 //                              │     │         │     │   │      │      │      │
 //                              └─────┴─────────┴─────┘   └──────┴──────┴──────┘
   &kp LC(TILDE)   &kp N1      &kp N2   &kp N3   &kp N4      &kp N5       &kp N6     &kp N7     &kp N8     &kp N9      &kp N0    &kp BSPC
   &kp LSHFT       &kp LC(A)   &trans   &trans   &kp LC(F)   &trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp DEL   &trans
-  &kp ESC         &kp LC(Z)   &trans   &trans   &kp LC(V)   &trans       &trans     &kp LEFT   &kp DOWN   &kp RIGHT   &trans    &trans
+  &kp ESC         &trans      &trans   &trans   &kp LC(V)   &trans       &trans     &kp LEFT   &kp DOWN   &kp RIGHT   &trans    &trans
                                        &trans   &trans      &trans       &trans     &trans     &trans
             >;
         };
@@ -130,19 +130,19 @@
         numbers {
             display-name = "Num";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
-//    │     │  1  │  2  │  3  │  4  │  5  │   │      │            │     │      │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │     │  6  │  7  │  8  │  9  │  0  │   │ left │    down    │ up  │ rght │ del │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │ esc │     │     │     │     │     │   │      │            │     │      │     │     │
-//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
-//                      │     │     │     │   │      │ mo WINDOWS │     │
-//                      └─────┴─────┴─────┘   └──────┴────────────┴─────┘
-  &trans    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
-  &trans    &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC   &trans   &trans   &trans   &trans   &trans       &trans     &trans        &trans   &trans      &trans    &trans
-                              &trans   &trans   &trans       &trans     &mo WINDOWS   &trans
+//    ┌─────┬─────┬──────────┬─────────┬─────────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
+//    │     │  1  │    2     │    3    │    4    │  5  │   │      │            │     │      │     │     │
+//    ├─────┼─────┼──────────┼─────────┼─────────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │     │  6  │    7     │    8    │    9    │  0  │   │ left │    down    │ up  │ rght │ del │     │
+//    ├─────┼─────┼──────────┼─────────┼─────────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │ esc │     │ WIN_SCRN │ lctl(C) │ lctl(V) │     │   │      │            │     │      │     │     │
+//    └─────┴─────┴──────────┼─────────┼─────────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
+//                           │         │         │     │   │      │ mo WINDOWS │     │
+//                           └─────────┴─────────┴─────┘   └──────┴────────────┴─────┘
+  &trans    &kp N1   &kp N2         &kp N3      &kp N4      &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
+  &trans    &kp N6   &kp N7         &kp N8      &kp N9      &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC   &trans   &kp WIN_SCRN   &kp LC(C)   &kp LC(V)   &trans       &trans     &trans        &trans   &trans      &trans    &trans
+                                    &trans      &trans      &trans       &trans     &mo WINDOWS   &trans
             >;
         };
 
@@ -187,22 +187,22 @@
         };
 
         /*  MOUSE 9 */
-        mouse {
+        mouse {za
             display-name = "Mouse";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌────────────────┬────────────────┬────────────────┬────────────────┬─────┬─────┐
-//    │     │     │     │     │     │     │   │      lclk      │  &mmv MOVE_up  │      rclk      │  &msc SCRL_up  │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼─────┼─────┤
-//    │     │     │     │     │     │     │   │ &mmv MOVE_left │ &mmv MOVE_down │ &mmv MOVE_rght │ &msc SCRL_down │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼─────┼─────┤
-//    │     │     │     │     │     │     │   │                │ &msc SCRL_left │ &msc SCRL_rght │      lctl      │     │     │
-//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴─────┴─────┘
-//                      │     │     │     │   │                │                │                │
-//                      └─────┴─────┴─────┘   └────────────────┴────────────────┴────────────────┘
-  &trans   &trans   &trans   &trans   &trans   &trans       &mkp LCLK        &mmv MOVE_UP     &mkp RCLK         &msc SCRL_UP     &trans   &trans
-  &trans   &trans   &trans   &trans   &trans   &trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_DOWN   &trans   &trans
-  &trans   &trans   &trans   &trans   &trans   &trans       &trans           &msc SCRL_LEFT   &msc SCRL_RIGHT   &kp LCTRL        &trans   &trans
-                             &trans   &trans   &trans       &trans           &trans           &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬──────────┐   ┌────────────────┬────────────────┬────────────────┬────────────────┬─────┬─────┐
+//    │     │     │     │     │     │          │   │      lclk      │  &mmv MOVE_up  │      rclk      │  &msc SCRL_up  │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼──────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼─────┼─────┤
+//    │     │     │     │     │     │          │   │ &mmv MOVE_left │ &mmv MOVE_down │ &mmv MOVE_rght │ &msc SCRL_down │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼──────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┼─────┼─────┤
+//    │     │     │     │     │     │          │   │                │ &msc SCRL_left │ &msc SCRL_rght │      lctl      │     │     │
+//    └─────┴─────┴─────┼─────┼─────┼──────────┤   ├────────────────┼────────────────┼────────────────┼────────────────┴─────┴─────┘
+//                      │     │     │ WIN_SCRN │   │                │                │                │
+//                      └─────┴─────┴──────────┘   └────────────────┴────────────────┴────────────────┘
+  &trans   &trans   &trans   &trans   &trans   &trans             &mkp LCLK        &mmv MOVE_UP     &mkp RCLK         &msc SCRL_UP     &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans             &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_DOWN   &trans   &trans
+  &trans   &trans   &trans   &trans   &trans   &trans             &trans           &msc SCRL_LEFT   &msc SCRL_RIGHT   &kp LCTRL        &trans   &trans
+                             &trans   &trans   &kp WIN_SCRN       &trans           &trans           &trans
             >;
         };
 
@@ -230,19 +230,19 @@
         win {
             display-name = "Windows";
             bindings = <
-//    ┌───────────┬─────┬───────────────┬─────────┬─────────┬─────┐   ┌────────────┬──────────────────┬──────────────────┬────────────┬─────────┬─────┐
-//    │ lgui(tab) │     │               │ lgui(E) │         │     │   │            │ lctl(lgui(left)) │ lctl(lgui(rght)) │            │         │     │
-//    ├───────────┼─────┼───────────────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┼─────────┼─────┤
-//    │           │     │    lgui(S)    │         │         │     │   │ lgui(left) │    lgui(down)    │     lgui(up)     │ lgui(rght) │ lgui(L) │     │
-//    ├───────────┼─────┼───────────────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┼─────────┼─────┤
-//    │           │     │ lsft(lgui(S)) │         │ lgui(V) │     │   │            │                  │                  │            │         │     │
-//    └───────────┴─────┴───────────────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┴─────────┴─────┘
-//                                      │         │         │     │   │            │                  │                  │
-//                                      └─────────┴─────────┴─────┘   └────────────┴──────────────────┴──────────────────┘
-  &kp LG(TAB)   &trans   &trans          &kp LG(E)   &trans      &trans       &trans         &kp LC(LG(LEFT))   &kp LC(LG(RIGHT))   &trans          &trans      &trans
-  &trans        &trans   &kp LG(S)       &trans      &trans      &trans       &kp LG(LEFT)   &kp LG(DOWN)       &kp LG(UP)          &kp LG(RIGHT)   &kp LG(L)   &trans
-  &trans        &trans   &kp LS(LG(S))   &trans      &kp LG(V)   &trans       &trans         &trans             &trans              &trans          &trans      &trans
-                                         &trans      &trans      &trans       &trans         &trans             &trans
+//    ┌───────────┬─────┬─────┬─────────┬─────────┬─────┐   ┌────────────┬──────────────────┬──────────────────┬────────────┬─────────┬─────┐
+//    │           │     │     │ lgui(E) │         │     │   │            │ lctl(lgui(left)) │ lctl(lgui(rght)) │            │         │     │
+//    ├───────────┼─────┼─────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┼─────────┼─────┤
+//    │           │     │     │         │         │     │   │ lgui(left) │    lgui(down)    │     lgui(up)     │ lgui(rght) │ lgui(L) │     │
+//    ├───────────┼─────┼─────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┼─────────┼─────┤
+//    │ lgui(tab) │     │     │         │ lgui(V) │     │   │            │                  │                  │            │         │     │
+//    └───────────┴─────┴─────┼─────────┼─────────┼─────┤   ├────────────┼──────────────────┼──────────────────┼────────────┴─────────┴─────┘
+//                            │         │         │     │   │            │                  │                  │
+//                            └─────────┴─────────┴─────┘   └────────────┴──────────────────┴──────────────────┘
+  &trans        &trans   &trans   &kp LG(E)   &trans      &trans       &trans         &kp LC(LG(LEFT))   &kp LC(LG(RIGHT))   &trans          &trans      &trans
+  &trans        &trans   &trans   &trans      &trans      &trans       &kp LG(LEFT)   &kp LG(DOWN)       &kp LG(UP)          &kp LG(RIGHT)   &kp LG(L)   &trans
+  &kp LG(TAB)   &trans   &trans   &trans      &kp LG(V)   &trans       &trans         &trans             &trans              &trans          &trans      &trans
+                                  &trans      &trans      &trans       &trans         &trans             &trans
             >;
         };
     };

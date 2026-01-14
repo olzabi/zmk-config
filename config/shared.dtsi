@@ -47,6 +47,7 @@
 // keys
 
 #define CA_TAB LC(LA(TAB))
+#define WIN_SCRN LS(LG(S))
 
 #define HML_A none  none
 #define HML_S LALT  S
@@ -127,6 +128,16 @@
 
       flavor = "hold-preferred";
       tapping-term-ms = <150>;
+    };
+
+    gam_ht: gam_tap_hold {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <125>;
     };
 
   };
