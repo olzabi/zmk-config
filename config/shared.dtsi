@@ -69,13 +69,13 @@
 
 &mt {
   tapping-term-ms = <200>;
-  quick_tap_ms = <0>;
+  quick-tap-ms = <0>;
   flavor = "tap-preferred";
 };
 
 &lt {
   tapping-term-ms = <300>;
-  quick_tap_ms = <0>;
+  quick-tap-ms = <0>;
   flavor = "tap-preferred";
 };
 
@@ -86,31 +86,31 @@
 
 / {
   behaviors {
-    hml: homerow_mods_left {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-
-      flavor = "balanced";
-      tapping-term-ms = <HRM_TAPPING_TERM>;
-      quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
-      require-prior-idle-ms = <HRM_PRIOR_IDLE>;
-      hold-trigger-key-positions = <KEYS_L KEYS_T>;
-      hold-trigger-on-release;
-    };
-
-    hmr: homerow_mods_right {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-
-      flavor = "balanced";
-      tapping-term-ms = <HRM_TAPPING_TERM>;
-      quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
-      require-prior-idle-ms = <HRM_PRIOR_IDLE>;
-      hold-trigger-key-positions = <KEYS_R KEYS_T>;
-      hold-trigger-on-release;
-    };
+    // hml: homerow_mods_left {
+    //   compatible = "zmk,behavior-hold-tap";
+    //   #binding-cells = <2>;
+    //   bindings = <&kp>, <&kp>;
+    //
+    //   flavor = "balanced";
+    //   tapping-term-ms = <HRM_TAPPING_TERM>;
+    //   quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
+    //   require-prior-idle-ms = <HRM_PRIOR_IDLE>;
+    //   hold-trigger-key-positions = <KEYS_L KEYS_T>;
+    //   hold-trigger-on-release;
+    // };
+    //
+    // hmr: homerow_mods_right {
+    //   compatible = "zmk,behavior-hold-tap";
+    //   #binding-cells = <2>;
+    //   bindings = <&kp>, <&kp>;
+    //
+    //   flavor = "balanced";
+    //   tapping-term-ms = <HRM_TAPPING_TERM>;
+    //   quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
+    //   require-prior-idle-ms = <HRM_PRIOR_IDLE>;
+    //   hold-trigger-key-positions = <KEYS_R KEYS_T>;
+    //   hold-trigger-on-release;
+    // };
 
     alt_gui: alt_gui {
       compatible = "zmk,behavior-tap-dance";
