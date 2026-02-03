@@ -7,10 +7,6 @@
             ╰────────────╯ ╰────────────╯
 */
 
-#define KEYS_L  0 1 2 3 4 5    12 13 14 15 16 17  24 25 26 27 28 29
-#define KEYS_R  6 7 8 9 10 11  18 19 20 21 22 23  30 31 32 33 34 35
-#define KEYS_T  36 37 38 39 40 41
-
 #define HRM_TAPPING_TERM      280
 #define HRM_TAPPING_TERM_FAST 200
 #define HRM_QUICK_TAP         175
@@ -42,30 +38,8 @@
 #define LAYERS    7
 #define WINDOWS  10
 
-#define HUH LS(LC(LALT)) // ctrl+shift+alt
-
-// keys
-
-#define CA_TAB LC(LA(TAB))
-
-#define HML_A none  none
-#define HML_S LALT  S
-#define HML_D LCTRL D
-#define HML_F LSHFT F
-
-#define HMR_J    RSHFT J
-#define HMR_K    RCTRL K
-#define HMR_L    RALT  L
-#define HMR_SEMI GUI   SEMI
-
-// Thumb left/mid/right
 #define T_L MOUSE RET
-#define T_M 0
 #define T_R FUNK  SPACE
-
-// Game(Gam/G) Thumb Left/Mid/Right
-// #define GAM_T_M GAM_NUM TAB
-#define GAM_T_M GAM_NUM GRAVE
 
 &mt {
   tapping-term-ms = <200>;
@@ -86,32 +60,6 @@
 
 / {
   behaviors {
-    // hml: homerow_mods_left {
-    //   compatible = "zmk,behavior-hold-tap";
-    //   #binding-cells = <2>;
-    //   bindings = <&kp>, <&kp>;
-    //
-    //   flavor = "balanced";
-    //   tapping-term-ms = <HRM_TAPPING_TERM>;
-    //   quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
-    //   require-prior-idle-ms = <HRM_PRIOR_IDLE>;
-    //   hold-trigger-key-positions = <KEYS_L KEYS_T>;
-    //   hold-trigger-on-release;
-    // };
-    //
-    // hmr: homerow_mods_right {
-    //   compatible = "zmk,behavior-hold-tap";
-    //   #binding-cells = <2>;
-    //   bindings = <&kp>, <&kp>;
-    //
-    //   flavor = "balanced";
-    //   tapping-term-ms = <HRM_TAPPING_TERM>;
-    //   quick-tap-ms = <HRM_TAPPING_TERM_FAST>;
-    //   require-prior-idle-ms = <HRM_PRIOR_IDLE>;
-    //   hold-trigger-key-positions = <KEYS_R KEYS_T>;
-    //   hold-trigger-on-release;
-    // };
-
     alt_gui: alt_gui {
       compatible = "zmk,behavior-tap-dance";
       #binding-cells = <0>;
