@@ -65,7 +65,8 @@
       #binding-cells = <0>;
       bindings = <&kp LALT>, <&kp LGUI>;
 
-      tapping-term-ms = <50>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <80>;
     };
 
     ltg: lt_gam {
