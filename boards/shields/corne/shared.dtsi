@@ -42,7 +42,7 @@
 #define T_R FUNK  SPACE
 
 &mt {
-  tapping-term-ms = <200>;
+  tapping-term-ms = <300>;
   quick-tap-ms = <0>;
   flavor = "tap-preferred";
 };
@@ -69,6 +69,15 @@
       quick-tap-ms = <80>;
     };
 
+    lslc_ret: lslc_ret {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <0>;
+      bindings = <&kp LS(LCTRL)>, <&kp RET>;
+
+      flavor = "tap-preferred";
+      tapping-term-ms = <300>;
+    }
+
     ltg: lt_gam {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -81,10 +90,4 @@
   };
 };
 
-// ---
-// for 40 41 combo hold can be used 8 9 20 21
-// for 36 37 combo hold can be used 12 24 2 3 14 15
-// ---
-// default layer to switch essential layer or switch bt profile
-//
-// ---
+

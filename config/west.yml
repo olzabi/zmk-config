@@ -14,20 +14,19 @@
 # $ west init -l config
 # $ west update
 # $ west zephyr-export
-#
----
 manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: urob
-      url-base: https://github.com/urob
-  # - name: petejohanson
-  #   url-base: https://github.com/petejohanson
+    # - name: m165437
+    #   url-base: https://github.com/M165437
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: v0.3.0
       import: app/west.yml
+    # - name: nice-view-gem
+    #   remote: m165437
+    #   revision: v0.3.0
   self:
     path: config

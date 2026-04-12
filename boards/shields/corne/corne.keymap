@@ -90,19 +90,19 @@
         gam {
             display-name = "Game";
             bindings = <
-//    ┌──────────┬───┬───┬─────┬────────────┬─────┐   ┌─────┬─────┬──────┬───┬───┬─────┐
-//    │ &alt_gui │ Q │ W │  E  │     R      │  T  │   │  Y  │  U  │  I   │ O │ P │     │
-//    ├──────────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
-//    │          │ A │ S │  D  │     F      │  G  │   │  H  │  J  │  K   │ L │ ; │     │
-//    ├──────────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
-//    │          │ Z │ X │  C  │     V      │  B  │   │  N  │  M  │  ,   │ . │ / │     │
-//    └──────────┴───┴───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┴───┴─────┘
-//                       │ tab │ mo GAM_NUM │ spc │   │ ent │     │ rgui │
-//                       └─────┴────────────┴─────┘   └─────┴─────┴──────┘
-  &alt_gui   &kp Q   &kp W   &kp E     &kp R         &kp T           &kp Y     &kp U    &kp I       &kp O     &kp P      &trans
-  &trans     &kp A   &kp S   &kp D     &kp F         &kp G           &kp H     &kp J    &kp K       &kp L     &kp SEMI   &trans
-  &trans     &kp Z   &kp X   &kp C     &kp V         &kp B           &kp N     &kp M    &kp COMMA   &kp DOT   &kp FSLH   &trans
-                             &kp TAB   &mo GAM_NUM   &kp SPACE       &kp RET   &trans   &kp RGUI
+//    ┌─────┬───┬───┬─────┬────────────┬─────┐   ┌─────┬─────┬──────┬───┬───┬─────┐
+//    │     │ Q │ W │  E  │     R      │  T  │   │  Y  │  U  │  I   │ O │ P │     │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
+//    │     │ A │ S │  D  │     F      │  G  │   │  H  │  J  │  K   │ L │ ; │     │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
+//    │     │ Z │ X │  C  │     V      │  B  │   │  N  │  M  │  ,   │ . │ / │     │
+//    └─────┴───┴───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┴───┴─────┘
+//                  │ tab │ mo GAM_NUM │ spc │   │ ent │     │ rgui │
+//                  └─────┴────────────┴─────┘   └─────┴─────┴──────┘
+  &trans   &kp Q   &kp W   &kp E     &kp R         &kp T           &kp Y     &kp U    &kp I       &kp O     &kp P      &trans
+  &trans   &kp A   &kp S   &kp D     &kp F         &kp G           &kp H     &kp J    &kp K       &kp L     &kp SEMI   &trans
+  &trans   &kp Z   &kp X   &kp C     &kp V         &kp B           &kp N     &kp M    &kp COMMA   &kp DOT   &kp FSLH   &trans
+                           &kp TAB   &mo GAM_NUM   &kp SPACE       &kp RET   &trans   &kp RGUI
             >;
         };
 
@@ -110,19 +110,19 @@
         gam_num {
             display-name = "Gam Num";
             bindings = <
-//    ┌─────────┬─────────┬─────┬─────┬─────────┬─────┐   ┌──────┬──────┬──────┬──────┬─────┬──────┐
-//    │ lctl(~) │    1    │  2  │  3  │    4    │  5  │   │  6   │  7   │  8   │  9   │  0  │ bspc │
-//    ├─────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//    │   ent   │ lctl(A) │     │     │ lctl(F) │     │   │ left │ down │  up  │ rght │ del │      │
-//    ├─────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┼─────┼──────┤
-//    │   esc   │ lctl(Z) │     │     │ lctl(V) │     │   │      │ left │ down │ rght │     │      │
-//    └─────────┴─────────┴─────┼─────┼─────────┼─────┤   ├──────┼──────┼──────┼──────┴─────┴──────┘
-//                              │     │         │     │   │      │      │      │
-//                              └─────┴─────────┴─────┘   └──────┴──────┴──────┘
-  &kp LC(TILDE)   &kp N1      &kp N2   &kp N3   &kp N4      &kp N5       &kp N6     &kp N7     &kp N8     &kp N9      &kp N0    &kp BSPC
-  &kp RET         &kp LC(A)   &trans   &trans   &kp LC(F)   &trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp DEL   &trans
-  &kp ESC         &kp LC(Z)   &trans   &trans   &kp LC(V)   &trans       &trans     &kp LEFT   &kp DOWN   &kp RIGHT   &trans    &trans
-                                       &trans   &trans      &trans       &trans     &trans     &trans
+//    ┌───────────┬─────────┬─────┬─────┬─────────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │     0     │    1    │  2  │  3  │    4    │  5  │   │      │      │     │      │     │     │
+//    ├───────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │ &lslc_ret │ lctl(A) │  6  │  7  │    8    │  9  │   │ left │ down │ up  │ rght │ del │     │
+//    ├───────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │    esc    │    ~    │     │     │ lctl(V) │     │   │      │      │     │      │     │     │
+//    └───────────┴─────────┴─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                                │     │         │     │   │      │      │     │
+//                                └─────┴─────────┴─────┘   └──────┴──────┴─────┘
+  &kp N0      &kp N1      &kp N2   &kp N3   &kp N4      &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
+  &lslc_ret   &kp LC(A)   &kp N6   &kp N7   &kp N8      &kp N9       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC     &kp TILDE   &trans   &trans   &kp LC(V)   &trans       &trans     &trans     &trans   &trans      &trans    &trans
+                                   &trans   &trans      &trans       &trans     &trans     &trans
             >;
         };
 
@@ -130,19 +130,19 @@
         numbers {
             display-name = "Num";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
-//    │     │  1  │  2  │  3  │  4  │  5  │   │      │            │     │      │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │     │  6  │  7  │  8  │  9  │  0  │   │ left │    down    │ up  │ rght │ del │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │ esc │     │     │     │     │     │   │      │            │     │      │     │     │
-//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
-//                      │     │     │     │   │      │ mo WINDOWS │     │
-//                      └─────┴─────┴─────┘   └──────┴────────────┴─────┘
-  &trans    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
-  &trans    &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC   &trans   &trans   &trans   &trans   &trans       &trans     &trans        &trans   &trans      &trans    &trans
-                              &trans   &trans   &trans       &trans     &mo WINDOWS   &trans
+//    ┌───────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
+//    │           │  1  │  2  │  3  │  4  │  5  │   │      │            │     │      │     │     │
+//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │ &lslc_ret │  6  │  7  │  8  │  9  │  0  │   │ left │    down    │ up  │ rght │ del │     │
+//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │    esc    │     │     │     │     │     │   │      │            │     │      │     │     │
+//    └───────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
+//                            │     │     │     │   │      │ mo WINDOWS │     │
+//                            └─────┴─────┴─────┘   └──────┴────────────┴─────┘
+  &trans      &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
+  &lslc_ret   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC     &trans   &trans   &trans   &trans   &trans       &trans     &trans        &trans   &trans      &trans    &trans
+                                &trans   &trans   &trans       &trans     &mo WINDOWS   &trans
             >;
         };
 

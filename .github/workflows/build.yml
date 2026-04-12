@@ -1,7 +1,14 @@
 name: 'Build Corne 3x6 nice!view nice!nano Firmware'
-# name: Test Corne 3x6 nice!view nice!nano
-on: [push, pull_request, workflow_dispatch]
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    paths:
+      - config/**
+      - boards/**
+      - build.yaml
 
 jobs:
   build:
+    # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
