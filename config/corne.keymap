@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #include "shared.dtsi"
-#include "combos.dtsi"
 #include "mouse.dtsi"
 
 /* Key Positions
