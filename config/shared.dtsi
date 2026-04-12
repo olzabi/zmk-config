@@ -40,6 +40,7 @@
 
 #define T_L MOUSE RET
 #define T_R FUNK  SPACE
+#define LSLC_RET LS(LCTRL) RET
 
 &mt {
   tapping-term-ms = <300>;
@@ -66,15 +67,6 @@
       bindings = <&kp LALT>, <&kp LGUI>;
 
       tapping-term-ms = <150>;
-    };
-
-    lslc_ret: lslc_ret {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <0>;
-      bindings = <&kp LS(LCTRL)>, <&kp RET>;
-
-      flavor = "tap-preferred";
-      tapping-term-ms = <300>;
     };
 
     ltg: lt_gam {

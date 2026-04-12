@@ -109,19 +109,19 @@
         gam_num {
             display-name = "Gam Num";
             bindings = <
-//    ┌───────────┬─────────┬─────┬─────┬─────────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │     0     │    1    │  2  │  3  │    4    │  5  │   │      │      │     │      │     │     │
-//    ├───────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ &lslc_ret │ lctl(A) │  6  │  7  │    8    │  9  │   │ left │ down │ up  │ rght │ del │     │
-//    ├───────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │    esc    │    ~    │     │     │ lctl(V) │     │   │      │      │     │      │     │     │
-//    └───────────┴─────────┴─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                                │     │         │     │   │      │      │     │
-//                                └─────┴─────────┴─────┘   └──────┴──────┴─────┘
-  &kp N0      &kp N1      &kp N2   &kp N3   &kp N4      &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
-  &lslc_ret   &kp LC(A)   &kp N6   &kp N7   &kp N8      &kp N9       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC     &kp TILDE   &trans   &trans   &kp LC(V)   &trans       &trans     &trans     &trans   &trans      &trans    &trans
-                                   &trans   &trans      &trans       &trans     &trans     &trans
+//    ┌─────────────────┬─────────┬─────┬─────┬─────────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │        0        │    1    │  2  │  3  │    4    │  5  │   │      │      │     │      │     │     │
+//    ├─────────────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │ mt lsftlctl_ent │ lctl(A) │  6  │  7  │    8    │  9  │   │ left │ down │ up  │ rght │ del │     │
+//    ├─────────────────┼─────────┼─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │       esc       │    ~    │     │     │ lctl(V) │     │   │      │      │     │      │     │     │
+//    └─────────────────┴─────────┴─────┼─────┼─────────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                                      │     │         │     │   │      │      │     │
+//                                      └─────┴─────────┴─────┘   └──────┴──────┴─────┘
+  &kp N0         &kp N1      &kp N2   &kp N3   &kp N4      &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
+  &mt LSLC_RET   &kp LC(A)   &kp N6   &kp N7   &kp N8      &kp N9       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC        &kp TILDE   &trans   &trans   &kp LC(V)   &trans       &trans     &trans     &trans   &trans      &trans    &trans
+                                      &trans   &trans      &trans       &trans     &trans     &trans
             >;
         };
 
@@ -129,19 +129,19 @@
         numbers {
             display-name = "Num";
             bindings = <
-//    ┌───────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
-//    │           │  1  │  2  │  3  │  4  │  5  │   │      │            │     │      │     │     │
-//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │ &lslc_ret │  6  │  7  │  8  │  9  │  0  │   │ left │    down    │ up  │ rght │ del │     │
-//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
-//    │    esc    │     │     │     │     │     │   │      │            │     │      │     │     │
-//    └───────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
-//                            │     │     │     │   │      │ mo WINDOWS │     │
-//                            └─────┴─────┴─────┘   └──────┴────────────┴─────┘
-  &trans      &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
-  &lslc_ret   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC     &trans   &trans   &trans   &trans   &trans       &trans     &trans        &trans   &trans      &trans    &trans
-                                &trans   &trans   &trans       &trans     &mo WINDOWS   &trans
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬────────────┬─────┬──────┬─────┬─────┐
+//    │     │  1  │  2  │  3  │  4  │  5  │   │      │            │     │      │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │     │  6  │  7  │  8  │  9  │  0  │   │ left │    down    │ up  │ rght │ del │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┼─────┼─────┤
+//    │ esc │     │     │     │     │     │   │      │            │     │      │     │     │
+//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼────────────┼─────┼──────┴─────┴─────┘
+//                      │     │     │     │   │      │ mo WINDOWS │     │
+//                      └─────┴─────┴─────┘   └──────┴────────────┴─────┘
+  &trans    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans        &trans   &trans      &trans    &trans
+  &trans    &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN      &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC   &trans   &trans   &trans   &trans   &trans       &trans     &trans        &trans   &trans      &trans    &trans
+                              &trans   &trans   &trans       &trans     &mo WINDOWS   &trans
             >;
         };
 
