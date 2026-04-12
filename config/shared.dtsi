@@ -76,7 +76,7 @@
 
       flavor = "tap-preferred";
       tapping-term-ms = <300>;
-    }
+    };
 
     ltg: lt_gam {
       compatible = "zmk,behavior-hold-tap";
