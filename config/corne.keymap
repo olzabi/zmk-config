@@ -29,19 +29,19 @@
         qwerty {
             display-name = "DEF";
             bindings = <
-//    ┌──────────┬───┬───┬─────┬──────────────┬───────────┐   ┌───────────┬─────────┬──────┬───┬───┬────────────┐
-//    │ &alt_gui │ Q │ W │  E  │      R       │     T     │   │     Y     │    U    │  I   │ O │ P │ mo WINDOWS │
-//    ├──────────┼───┼───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┼───┼────────────┤
-//    │   lctl   │ A │ S │  D  │      F       │     G     │   │     H     │    J    │  K   │ L │ ; │     '      │
-//    ├──────────┼───┼───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┼───┼────────────┤
-//    │   lsft   │ Z │ X │  C  │      V       │     B     │   │     N     │    M    │  ,   │ . │ / │    esc     │
-//    └──────────┴───┴───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┴───┴────────────┘
-//                       │ tab │ mo NUMBErsft │ lt FN_spc │   │ lt MO_ent │ mo SYMB │ bspc │
-//                       └─────┴──────────────┴───────────┘   └───────────┴─────────┴──────┘
-  &alt_gui    &kp Q   &kp W   &kp E     &kp R         &kp T            &kp Y        &kp U      &kp I       &kp O     &kp P      &mo WINDOWS
-  &kp LCTRL   &kp A   &kp S   &kp D     &kp F         &kp G            &kp H        &kp J      &kp K       &kp L     &kp SEMI   &kp SQT
-  &kp LSHFT   &kp Z   &kp X   &kp C     &kp V         &kp B            &kp N        &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp ESC
-                              &kp TAB   &mo NUMBERS   &lt FN_SPC       &lt MO_RET   &mo SYMB   &kp BSPC
+//    ┌──────────┬───┬───┬─────┬──────────────┬───────────┐   ┌───────────┬─────────┬────────────┬───┬───┬──────┐
+//    │ &alt_gui │ Q │ W │  E  │      R       │     T     │   │     Y     │    U    │     I      │ O │ P │ bspc │
+//    ├──────────┼───┼───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼────────────┼───┼───┼──────┤
+//    │   lctl   │ A │ S │  D  │      F       │     G     │   │     H     │    J    │     K      │ L │ ; │  '   │
+//    ├──────────┼───┼───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼────────────┼───┼───┼──────┤
+//    │   lsft   │ Z │ X │  C  │      V       │     B     │   │     N     │    M    │     ,      │ . │ / │ esc  │
+//    └──────────┴───┴───┼─────┼──────────────┼───────────┤   ├───────────┼─────────┼────────────┼───┴───┴──────┘
+//                       │ tab │ mo NUMBErsft │ lt FN_spc │   │ lt MO_ent │ mo SYMB │ mo WINDOWS │
+//                       └─────┴──────────────┴───────────┘   └───────────┴─────────┴────────────┘
+  &alt_gui    &kp Q   &kp W   &kp E     &kp R         &kp T            &kp Y        &kp U      &kp I         &kp O     &kp P      &kp BSPC
+  &kp LCTRL   &kp A   &kp S   &kp D     &kp F         &kp G            &kp H        &kp J      &kp K         &kp L     &kp SEMI   &kp SQT
+  &kp LSHFT   &kp Z   &kp X   &kp C     &kp V         &kp B            &kp N        &kp M      &kp COMMA     &kp DOT   &kp FSLH   &kp ESC
+                              &kp TAB   &mo NUMBERS   &lt FN_SPC       &lt MO_RET   &mo SYMB   &mo WINDOWS
             >;
         };
 
@@ -89,19 +89,19 @@
         gam {
             display-name = "Game";
             bindings = <
-//    ┌─────┬───┬───┬─────┬────────────┬─────┐   ┌─────┬─────┬──────┬───┬───┬─────┐
-//    │     │ Q │ W │  E  │     R      │  T  │   │  Y  │  U  │  I   │ O │ P │     │
-//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
-//    │     │ A │ S │  D  │     F      │  G  │   │  H  │  J  │  K   │ L │ ; │     │
-//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┼───┼─────┤
-//    │     │ Z │ X │  C  │     V      │  B  │   │  N  │  M  │  ,   │ . │ / │     │
-//    └─────┴───┴───┼─────┼────────────┼─────┤   ├─────┼─────┼──────┼───┴───┴─────┘
-//                  │ tab │ mo GAM_NUM │ spc │   │ ent │     │ rgui │
-//                  └─────┴────────────┴─────┘   └─────┴─────┴──────┘
-  &trans   &kp Q   &kp W   &kp E     &kp R         &kp T           &kp Y     &kp U    &kp I       &kp O     &kp P      &trans
-  &trans   &kp A   &kp S   &kp D     &kp F         &kp G           &kp H     &kp J    &kp K       &kp L     &kp SEMI   &trans
-  &trans   &kp Z   &kp X   &kp C     &kp V         &kp B           &kp N     &kp M    &kp COMMA   &kp DOT   &kp FSLH   &trans
-                           &kp TAB   &mo GAM_NUM   &kp SPACE       &kp RET   &trans   &kp RGUI
+//    ┌─────┬───┬───┬─────┬────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
+//    │     │ Q │ W │  E  │     R      │  T  │   │  Y  │  U  │  I  │ O │ P │     │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
+//    │     │ A │ S │  D  │     F      │  G  │   │  H  │  J  │  K  │ L │ ; │     │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
+//    │     │ Z │ X │  C  │     V      │  B  │   │  N  │  M  │  ,  │ . │ / │     │
+//    └─────┴───┴───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
+//                  │     │ mo GAM_NUM │ spc │   │ ent │     │     │
+//                  └─────┴────────────┴─────┘   └─────┴─────┴─────┘
+  &trans   &kp Q   &kp W   &kp E    &kp R         &kp T           &kp Y     &kp U    &kp I       &kp O     &kp P      &trans
+  &trans   &kp A   &kp S   &kp D    &kp F         &kp G           &kp H     &kp J    &kp K       &kp L     &kp SEMI   &trans
+  &trans   &kp Z   &kp X   &kp C    &kp V         &kp B           &kp N     &kp M    &kp COMMA   &kp DOT   &kp FSLH   &trans
+                           &trans   &mo GAM_NUM   &kp SPACE       &kp RET   &trans   &trans
             >;
         };
 
@@ -109,19 +109,19 @@
         gam_num {
             display-name = "Gam Num";
             bindings = <
-//    ┌─────────────────┬───┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │        0        │ 1 │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────────────────┼───┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ mt lsftlctl_ent │ 6 │  7  │  8  │  9  │     │   │ left │ down │ up  │ rght │ del │     │
-//    ├─────────────────┼───┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │       esc       │ ~ │     │     │     │     │   │      │      │     │      │     │     │
-//    └─────────────────┴───┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                                │     │     │     │   │      │      │     │
-//                                └─────┴─────┴─────┘   └──────┴──────┴─────┘
-  &kp N0         &kp N1      &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
-  &mt LSLC_RET   &kp N6      &kp N7   &kp N8   &kp N9   &trans       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC        &kp TILDE   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans    &trans
-                                      &trans   &trans   &trans       &trans     &trans     &trans
+//    ┌─────────────────┬───┬─────┬──────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │        0        │ 1 │  2  │  3   │  4  │  5  │   │      │      │     │      │     │     │
+//    ├─────────────────┼───┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │ mt lsftlctl_ent │ 6 │  7  │  8   │  9  │     │   │ left │ down │ up  │ rght │ del │     │
+//    ├─────────────────┼───┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │       esc       │ ~ │     │      │     │     │   │      │      │     │      │     │     │
+//    └─────────────────┴───┴─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                                │ bspc │     │ del │   │      │      │     │
+//                                └──────┴─────┴─────┘   └──────┴──────┴─────┘
+  &kp N0         &kp N1      &kp N2   &kp N3     &kp N4   &kp N5        &trans     &trans     &trans   &trans      &trans    &trans
+  &mt LSLC_RET   &kp N6      &kp N7   &kp N8     &kp N9   &trans        &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC        &kp TILDE   &trans   &trans     &trans   &trans        &trans     &trans     &trans   &trans      &trans    &trans
+                                      &kp BSPC   &trans   &kp DEL       &trans     &trans     &trans
             >;
         };
 
@@ -129,19 +129,19 @@
         numbers {
             display-name = "Num";
             bindings = <
-//    ┌─────────────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │        0        │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ mt lsftlctl_ent │  6  │  7  │  8  │  9  │     │   │ left │ down │ up  │ rght │ del │     │
-//    ├─────────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │       esc       │     │     │     │     │     │   │      │      │     │      │     │     │
-//    └─────────────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                                  │     │     │     │   │      │      │     │
-//                                  └─────┴─────┴─────┘   └──────┴──────┴─────┘
-  &kp N0         &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
-  &mt LSLC_RET   &kp N6   &kp N7   &kp N8   &kp N9   &trans       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &kp ESC        &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans    &trans
-                                   &trans   &trans   &trans       &trans     &trans     &trans
+//    ┌─────────────────┬─────┬─────┬──────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │        0        │  1  │  2  │  3   │  4  │  5  │   │      │      │     │      │     │     │
+//    ├─────────────────┼─────┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │ mt lsftlctl_ent │  6  │  7  │  8   │  9  │     │   │ left │ down │ up  │ rght │ del │     │
+//    ├─────────────────┼─────┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │       esc       │     │     │      │     │     │   │      │      │     │      │     │     │
+//    └─────────────────┴─────┴─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                                  │ bspc │     │ del │   │      │      │     │
+//                                  └──────┴─────┴─────┘   └──────┴──────┴─────┘
+  &kp N0         &kp N1   &kp N2   &kp N3     &kp N4   &kp N5        &trans     &trans     &trans   &trans      &trans    &trans
+  &mt LSLC_RET   &kp N6   &kp N7   &kp N8     &kp N9   &trans        &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp ESC        &trans   &trans   &trans     &trans   &trans        &trans     &trans     &trans   &trans      &trans    &trans
+                                   &kp BSPC   &trans   &kp DEL       &trans     &trans     &trans
             >;
         };
 
