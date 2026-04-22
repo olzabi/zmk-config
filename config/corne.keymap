@@ -30,9 +30,10 @@
 #define MO_RET   MOUSE     RET
 #define FN_SPC   FUNK      SPACE
 
-/ {
-  behaviors {
-  };
+&lt {
+  tapping-term-ms = <300>;
+  quick-tap-ms = <0>;
+  flavor = "tap-preferred";
 };
 
 / {
@@ -43,19 +44,19 @@
         qwerty {
             display-name = "Default";
             bindings = <
-//    ┌──────┬───┬───┬──────┬──────────────┬───────────┐   ┌───────────┬─────────┬──────┬───┬───┬──────┐
-//    │ tab  │ Q │ W │  E   │      R       │     T     │   │     Y     │    U    │  I   │ O │ P │ bspc │
-//    ├──────┼───┼───┼──────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┼───┼──────┤
-//    │ lctl │ A │ S │  D   │      F       │     G     │   │     H     │    J    │  K   │ L │ ; │  '   │
-//    ├──────┼───┼───┼──────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┼───┼──────┤
-//    │ lsft │ Z │ X │  C   │      V       │     B     │   │     N     │    M    │  ,   │ . │ / │ esc  │
-//    └──────┴───┴───┼──────┼──────────────┼───────────┤   ├───────────┼─────────┼──────┼───┴───┴──────┘
-//                   │ lgui │ mo NUMBErsft │ lt FN_spc │   │ lt MO_ent │ mo SYMB │ lalt │
-//                   └──────┴──────────────┴───────────┘   └───────────┴─────────┴──────┘
-  &kp TAB     &kp Q   &kp W   &kp E      &kp R         &kp T            &kp Y        &kp U      &kp I       &kp O     &kp P      &kp BSPC
-  &kp LCTRL   &kp A   &kp S   &kp D      &kp F         &kp G            &kp H        &kp J      &kp K       &kp L     &kp SEMI   &kp SQT
-  &kp LSHFT   &kp Z   &kp X   &kp C      &kp V         &kp B            &kp N        &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp ESC
-                              &kp LGUI   &mo NUMBERS   &lt FN_SPC       &lt MO_RET   &mo SYMB   &kp LALT
+//    ┌──────┬───┬───┬──────┬──────────────┬─────────────┐   ┌──────────────┬─────────┬──────┬───┬───┬──────┐
+//    │ tab  │ Q │ W │  E   │      R       │      T      │   │      Y       │    U    │  I   │ O │ P │ bspc │
+//    ├──────┼───┼───┼──────┼──────────────┼─────────────┤   ├──────────────┼─────────┼──────┼───┼───┼──────┤
+//    │ lctl │ A │ S │  D   │      F       │      G      │   │      H       │    J    │  K   │ L │ ; │  '   │
+//    ├──────┼───┼───┼──────┼──────────────┼─────────────┤   ├──────────────┼─────────┼──────┼───┼───┼──────┤
+//    │ lsft │ Z │ X │  C   │      V       │      B      │   │      N       │    M    │  ,   │ . │ / │ esc  │
+//    └──────┴───┴───┼──────┼──────────────┼─────────────┤   ├──────────────┼─────────┼──────┼───┴───┴──────┘
+//                   │ lgui │ mo NUMBErsft │ lt FUNK spc │   │ lt MOUSE ent │ mo SYMB │ lalt │
+//                   └──────┴──────────────┴─────────────┘   └──────────────┴─────────┴──────┘
+  &kp TAB     &kp Q   &kp W   &kp E      &kp R         &kp T                &kp Y           &kp U      &kp I       &kp O     &kp P      &kp BSPC
+  &kp LCTRL   &kp A   &kp S   &kp D      &kp F         &kp G                &kp H           &kp J      &kp K       &kp L     &kp SEMI   &kp SQT
+  &kp LSHFT   &kp Z   &kp X   &kp C      &kp V         &kp B                &kp N           &kp M      &kp COMMA   &kp DOT   &kp FSLH   &kp ESC
+                              &kp LGUI   &mo NUMBERS   &lt FUNK SPACE       &lt MOUSE RET   &mo SYMB   &kp LALT
             >;
         };
 
