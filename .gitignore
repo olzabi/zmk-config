@@ -16,6 +16,7 @@ modules/
 tools/
 zmk/
 zephyr/
+optional/
 
 # c, cpp
 *.x
