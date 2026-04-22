@@ -1,0 +1,18 @@
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/pointing.h>
+
+
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
+
+&mmv {
+  time-to-max-speed-ms = <400>;  // 300
+  acceleration-exponent = <1>;   // 1
+  delay-ms = <0>;                // 0
+};
+
+&msc {
+  time-to-max-speed-ms = <400>;  // 300
+  acceleration-exponent = <1>;   // 1
+  delay-ms = <0>;                // 0
+};
