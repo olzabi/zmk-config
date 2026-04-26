@@ -161,19 +161,19 @@
         symb {
             display-name = "Symbols";
             bindings = <
-//    ┌─────┬───┬─────┬──────┬────────────┬─────┐   ┌───────────────┬─────┬─────┬─────┬───┬─────┐
-//    │     │ ! │  @  │  #   │     $      │  %  │   │ to laltYErsft │  (  │  )  │     │ | │     │
-//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┼───┼─────┤
-//    │     │ ^ │  &  │ kp_* │     <      │  >  │   │       +       │  [  │  ]  │  -  │ = │  `  │
-//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┼───┼─────┤
-//    │     │ ~ │     │      │            │     │   │       -       │  {  │  }  │     │ \ │  _  │
-//    └─────┴───┴─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┴───┴─────┘
+//    ┌─────┬───┬─────┬──────┬────────────┬─────┐   ┌───────────────┬─────┬─────┬───┬───┬─────┐
+//    │     │ ! │  @  │  #   │     $      │  %  │   │ to laltYErsft │     │  (  │ ) │ | │     │
+//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┼───┼─────┤
+//    │     │ ^ │  &  │ kp_* │     <      │  >  │   │               │  -  │  [  │ ] │ = │  `  │
+//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┼───┼─────┤
+//    │     │ ~ │     │      │            │     │   │               │  +  │  {  │ } │ \ │  _  │
+//    └─────┴───┴─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┴───┴─────┘
 //                    │      │ mo WINDOWS │     │   │               │     │     │
 //                    └──────┴────────────┴─────┘   └───────────────┴─────┴─────┘
-  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR      &kp PRCNT       &to LAYERS   &kp LPAR   &kp RPAR   &trans      &kp PIPE    &trans
-  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LT        &kp GT          &kp PLUS     &kp LBKT   &kp RBKT   &kp MINUS   &kp EQUAL   &kp GRAVE
-  &trans   &kp TILDE   &trans     &trans            &trans        &trans          &kp MINUS    &kp LBRC   &kp RBRC   &trans      &kp BSLH    &kp UNDER
-                                  &trans            &mo WINDOWS   &trans          &trans       &trans     &trans
+  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR      &kp PRCNT       &to LAYERS   &trans      &kp LPAR   &kp RPAR   &kp PIPE    &trans
+  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LT        &kp GT          &trans       &kp MINUS   &kp LBKT   &kp RBKT   &kp EQUAL   &kp GRAVE
+  &trans   &kp TILDE   &trans     &trans            &trans        &trans          &trans       &kp PLUS    &kp LBRC   &kp RBRC   &kp BSLH    &kp UNDER
+                                  &trans            &mo WINDOWS   &trans          &trans       &trans      &trans
             >;
         };
 
