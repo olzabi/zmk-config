@@ -25,9 +25,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        /* LAYOUT 1 */
         qwerty {
-            display-name = "DEF";
+            display-name = "Default";
             bindings = <
 //    ┌──────────┬───┬───┬─────┬──────────────┬───────────┐   ┌───────────┬─────────┬────────────┬───┬───┬──────┐
 //    │ &alt_gui │ Q │ W │  E  │      R       │     T     │   │     Y     │    U    │     I      │ O │ P │ bspc │
@@ -45,47 +44,6 @@
             >;
         };
 
-        /* LAYOUT 2 */
-        dvorak {
-            display-name = "Dvorak";
-            bindings = <
-//    ┌─────┬───┬───┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
-//    │     │ ' │ , │  .  │  P  │  Y  │   │  F  │  G  │  C  │ R │ L │     │
-//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ A │ O │  E  │  U  │  I  │   │  D  │  H  │  T  │ N │ S │  /  │
-//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ ; │ Q │  J  │  K  │  X  │   │  B  │  M  │  W  │ V │ Z │     │
-//    └─────┴───┴───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
-//                  │     │     │     │   │     │     │     │
-//                  └─────┴─────┴─────┘   └─────┴─────┴─────┘
-  &trans   &kp SQT    &kp COMMA   &kp DOT   &kp P    &kp Y        &kp F    &kp G    &kp C    &kp R   &kp L   &trans
-  &trans   &kp A      &kp O       &kp E     &kp U    &kp I        &kp D    &kp H    &kp T    &kp N   &kp S   &kp FSLH
-  &trans   &kp SEMI   &kp Q       &kp J     &kp K    &kp X        &kp B    &kp M    &kp W    &kp V   &kp Z   &trans
-                                  &trans    &trans   &trans       &trans   &trans   &trans
-            >;
-        };
-
-        /* LAYOUT 3 */
-        colemak {
-            display-name = "Colemak";
-            bindings = <
-//    ┌─────┬───┬───┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
-//    │     │ Q │ W │  F  │  P  │  B  │   │  J  │  L  │  U  │ Y │ ' │     │
-//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ A │ R │  S  │  T  │  G  │   │  M  │  N  │  E  │ I │ O │     │
-//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ Z │ X │  C  │  D  │  V  │   │  K  │  H  │  ,  │ . │ / │     │
-//    └─────┴───┴───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
-//                  │     │     │     │   │     │     │     │
-//                  └─────┴─────┴─────┘   └─────┴─────┴─────┘
-  &trans   &kp Q   &kp W   &kp F    &kp P    &kp B        &kp J    &kp L    &kp U       &kp Y     &kp SQT    &trans
-  &trans   &kp A   &kp R   &kp S    &kp T    &kp G        &kp M    &kp N    &kp E       &kp I     &kp O      &trans
-  &trans   &kp Z   &kp X   &kp C    &kp D    &kp V        &kp K    &kp H    &kp COMMA   &kp DOT   &kp FSLH   &trans
-                           &trans   &trans   &trans       &trans   &trans   &trans
-            >;
-        };
-
-        /* GAME 4 */
         gam {
             display-name = "Game";
             bindings = <
@@ -105,7 +63,6 @@
             >;
         };
 
-        /* GAME NUMBERS  5 */
         gam_num {
             display-name = "Gam Num";
             bindings = <
@@ -125,7 +82,6 @@
             >;
         };
 
-        /* NUMBERS 6 */
         numbers {
             display-name = "Num";
             bindings = <
@@ -145,7 +101,6 @@
             >;
         };
 
-        /* FUNK 7 */
         funk {
             display-name = "Funkee";
             bindings = <
@@ -165,27 +120,25 @@
             >;
         };
 
-        /* LAYERS 8 */
         layers {
             display-name = "Layers";
             bindings = <
-//    ┌──────────┬──────────┬──────────┬────────────┬──────────┬──────┐   ┌────────────┬─────────────┬────────────┬─────┬─────┬─────┐
-//    │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │  bt_sel 3  │ bt_sel 4 │      │   │ to QWERTY  │ to DVOraltK │ to COLEMAK │     │     │     │
-//    ├──────────┼──────────┼──────────┼────────────┼──────────┼──────┤   ├────────────┼─────────────┼────────────┼─────┼─────┼─────┤
-//    │          │          │          │            │          │      │   │            │             │            │     │     │     │
-//    ├──────────┼──────────┼──────────┼────────────┼──────────┼──────┤   ├────────────┼─────────────┼────────────┼─────┼─────┼─────┤
-//    │          │          │          │            │          │      │   │ to GAM_DEF │             │            │     │     │     │
-//    └──────────┴──────────┴──────────┼────────────┼──────────┼──────┤   ├────────────┼─────────────┼────────────┼─────┴─────┴─────┘
-//                                     │ &sys_reset │  bt_clr  │ boot │   │            │             │            │
-//                                     └────────────┴──────────┴──────┘   └────────────┴─────────────┴────────────┘
-  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none             &to QWERTY    &to DVORAK   &to COLEMAK   &none   &none   &none
-  &none          &none          &none          &none          &none          &none             &none         &none        &none         &none   &none   &none
-  &none          &none          &none          &none          &none          &none             &to GAM_DEF   &none        &none         &none   &none   &none
-                                               &sys_reset     &bt BT_CLR     &bootloader       &trans        &trans       &none
+//    ┌──────────┬──────────┬──────────┬──────────┬────────────┬──────┐   ┌────────────┬─────┬─────┬─────┬─────┬────────┐
+//    │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │  bt_sel 4  │      │   │ to QWERTY  │     │     │     │     │        │
+//    ├──────────┼──────────┼──────────┼──────────┼────────────┼──────┤   ├────────────┼─────┼─────┼─────┼─────┼────────┤
+//    │          │          │          │          │            │      │   │            │     │     │     │     │        │
+//    ├──────────┼──────────┼──────────┼──────────┼────────────┼──────┤   ├────────────┼─────┼─────┼─────┼─────┼────────┤
+//    │  bt_clr  │          │          │          │            │      │   │ to GAM_DEF │     │     │     │     │ bt_clr │
+//    └──────────┴──────────┴──────────┼──────────┼────────────┼──────┤   ├────────────┼─────┼─────┼─────┴─────┴────────┘
+//                                     │          │ &sys_reset │ boot │   │    boot    │     │     │
+//                                     └──────────┴────────────┴──────┘   └────────────┴─────┴─────┘
+  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &none             &to QWERTY    &none   &none   &none   &none   &none
+  &none          &none          &none          &none          &none          &none             &none         &none   &none   &none   &none   &none
+  &bt BT_CLR     &none          &none          &none          &none          &none             &to GAM_DEF   &none   &none   &none   &none   &bt BT_CLR
+                                               &none          &sys_reset     &bootloader       &bootloader   &none   &none
             >;
         };
 
-        /*  MOUSE 9 */
         mouse {
             display-name = "Mouse";
             bindings = <
@@ -205,27 +158,25 @@
             >;
         };
 
-        /*  SYMB 10 */
         symb {
-            display-name = "Symb";
+            display-name = "Symbols";
             bindings = <
-//    ┌─────┬───┬─────┬──────┬────────────┬─────┐   ┌───────────────┬─────┬─────┬───┬───┬─────┐
-//    │     │ ! │  @  │  #   │     $      │  %  │   │ to laltYErsft │     │  (  │ ) │ | │     │
-//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┼───┼─────┤
-//    │     │ ^ │  &  │ kp_* │     <      │  >  │   │               │  -  │  [  │ ] │ = │  `  │
-//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┼───┼─────┤
-//    │     │ ~ │     │      │            │     │   │               │  +  │  {  │ } │ \ │  _  │
-//    └─────┴───┴─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼───┴───┴─────┘
+//    ┌─────┬───┬─────┬──────┬────────────┬─────┐   ┌───────────────┬─────┬─────┬─────┬───┬─────┐
+//    │     │ ! │  @  │  #   │     $      │  %  │   │ to laltYErsft │  (  │  )  │     │ | │     │
+//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┼───┼─────┤
+//    │     │ ^ │  &  │ kp_* │     <      │  >  │   │       +       │  [  │  ]  │  -  │ = │  `  │
+//    ├─────┼───┼─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┼───┼─────┤
+//    │     │ ~ │     │      │            │     │   │       -       │  {  │  }  │     │ \ │  _  │
+//    └─────┴───┴─────┼──────┼────────────┼─────┤   ├───────────────┼─────┼─────┼─────┴───┴─────┘
 //                    │      │ mo WINDOWS │     │   │               │     │     │
 //                    └──────┴────────────┴─────┘   └───────────────┴─────┴─────┘
-  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR      &kp PRCNT       &to LAYERS   &none       &kp LPAR   &kp RPAR   &kp PIPE    &trans
-  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LT        &kp GT          &trans       &kp MINUS   &kp LBKT   &kp RBKT   &kp EQUAL   &kp GRAVE
-  &trans   &kp TILDE   &trans     &trans            &trans        &trans          &trans       &kp PLUS    &kp LBRC   &kp RBRC   &kp BSLH    &kp UNDER
-                                  &trans            &mo WINDOWS   &trans          &trans       &trans      &trans
+  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR      &kp PRCNT       &to LAYERS   &kp LPAR   &kp RPAR   &trans      &kp PIPE    &trans
+  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LT        &kp GT          &kp PLUS     &kp LBKT   &kp RBKT   &kp MINUS   &kp EQUAL   &kp GRAVE
+  &trans   &kp TILDE   &trans     &trans            &trans        &trans          &kp MINUS    &kp LBRC   &kp RBRC   &trans      &kp BSLH    &kp UNDER
+                                  &trans            &mo WINDOWS   &trans          &trans       &trans     &trans
             >;
         };
 
-          /*  WINDOWS 11 */
         win {
             display-name = "Windows";
             bindings = <

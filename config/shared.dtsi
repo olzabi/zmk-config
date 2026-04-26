@@ -13,30 +13,15 @@
 #define HRM_PRIOR_IDLE        150
 
 // layers
-#define QWERTY    0 // a.k.a default
-#define DVORAK    1
-#define COLEMAK   2
-
-// #define NUMBERS   4
-// #define FUNK      5
-// #define LAYERS    6
-// #define GAM_NUM   7
-// #define GAM_ARR   8
-// #define MOUSE     9
-// #define SYMB     10
-
-#define GAM_DEF   3
-#define GAM_NUM   4
-// #define GAM_ARR   5
-
-#define NUMBERS   5
-#define SYMB     9
-
-#define FUNK      6
-#define MOUSE     8
-
+#define QWERTY    0
+#define GAM_DEF   1
+#define GAM_NUM   2
+#define NUMBERS   3
+#define SYMB      4
+#define FUNK      5
+#define MOUSE     6
 #define LAYERS    7
-#define WINDOWS  10
+#define WINDOWS   8
 
 #define MO_RET MOUSE RET
 #define FN_SPC FUNK  SPACE
@@ -68,16 +53,6 @@
 
       tapping-term-ms = <200>;
     };
-
-    ltg: lt_gam {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&mo>, <&kp>;
-
-      flavor = "hold-preferred";
-      tapping-term-ms = <150>;
-    };
-
   };
 };
 
