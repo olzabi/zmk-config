@@ -17,10 +17,10 @@
 #define GAM_DEF   1
 #define GAM_NUM   2
 #define NUMBERS   3
-#define SYMB      4
-#define FUNK      5
+#define FUNK      4
+#define LAYERS    5
 #define MOUSE     6
-#define LAYERS    7
+#define SYMB      7
 #define WINDOWS   8
 
 #define MO_RET MOUSE RET
