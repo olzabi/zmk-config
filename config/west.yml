@@ -15,18 +15,25 @@
 # $ west update
 # $ west zephyr-export
 manifest:
+  defaults:
+    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: m165437
       url-base: https://github.com/M165437
+    - name: whoop-t
+      url-base: https://github.com/whoop-t
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3
+      revision: main
       import: app/west.yml
-    - name: nice-view-gem
-      remote: m165437
-      revision: v0.3.0
+    - name: nice-luffy-wanted
+      remote: whoop-t
+      revision: main
+      # - name: nice-view-gem
+      #   remote: m165437
+      #   revision: v0.3.0
   self:
     path: config
