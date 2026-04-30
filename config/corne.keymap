@@ -106,17 +106,17 @@
             display-name = "Funkee";
             bindings = <
 //    ┌──────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬──────┐
-//    │ next │ f1  │ f2  │ f3  │ f4  │ f5  │   │ f7  │ f8  │ f9  │ f10 │ f11 │ home │
+//    │ play │ f1  │ f2  │ f3  │ f4  │ f5  │   │ f7  │ f8  │ f9  │ f10 │ f11 │ home │
 //    ├──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┤
 //    │ ent  │ f6  │     │     │     │     │   │ f12 │ f13 │ f14 │ f15 │ f16 │ end  │
 //    ├──────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼──────┤
-//    │ play │     │     │     │     │     │   │ f17 │     │     │     │     │ ins  │
+//    │ next │     │     │     │     │     │   │ f17 │     │     │     │     │ ins  │
 //    └──────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴──────┘
 //                       │     │     │     │   │     │     │     │
 //                       └─────┴─────┴─────┘   └─────┴─────┴─────┘
-  &kp C_NEXT   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp HOME
+  &kp C_PLAY   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5       &kp F7    &kp F8    &kp F9    &kp F10   &kp F11   &kp HOME
   &kp RET      &kp F6   &trans   &trans   &trans   &trans       &kp F12   &kp F13   &kp F14   &kp F15   &kp F16   &kp END
-  &kp C_PLAY   &trans   &trans   &trans   &trans   &trans       &kp F17   &trans    &trans    &trans    &trans    &kp INS
+  &kp C_NEXT   &trans   &trans   &trans   &trans   &trans       &kp F17   &trans    &trans    &trans    &trans    &kp INS
                                  &trans   &trans   &trans       &trans    &trans    &trans
             >;
         };
