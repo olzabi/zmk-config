@@ -7,30 +7,35 @@
             ╰────────────╯ ╰────────────╯
 */
 
-#define HRM_TAPPING_TERM      280
-#define HRM_TAPPING_TERM_FAST 200
-#define HRM_QUICK_TAP         175
-#define HRM_PRIOR_IDLE        150
+
+#define KEYS_L 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38
+#define KEYS_R 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41
 
 // layers
 #define QWERTY    0
-#define GAM_DEF   1
-#define GAM_NUM   2
-#define NUMBERS   3
-#define FUNK      4
-#define LAYERS    5
+#define GAME      1
+#define GAME_NUM  2
+#define NUM       3
+#define FN        4
+#define MEDIA     5
 #define MOUSE     6
-#define SYMB      7
-#define WINDOWS   8
+#define SYM       7
+#define NAV       8
+#define GAME_NAV  9
 
-#define MO_RET MOUSE RET
-#define FN_SPC FUNK  SPACE
-#define LSLC_RET LS(LCTRL) RET
+#define alt_esc   ht_alt_esc LALT     ESC
+#define nav_tab   tkl        NAV      TAB
+#define fn_spc    tkl_spc    FN       SPACE
+#define num_esc   tkl_num    NUM      ESC
+#define gam_nav   tkl        GAME_NAV TAB
+#define mo_spc    tkr_spc    MOUSE    SPACE
+#define sym_ret   tkr_sym    SYM      RET
+#define media_del tkr        MEDIA    DEL
 
 &mt {
-  tapping-term-ms = <300>;
-  quick-tap-ms = <0>;
-  flavor = "tap-preferred";
+  tapping-term-ms = <220>;
+  quick-tap-ms = <165>;
+  flavor = "balanced";
 };
 
 &lt {
@@ -45,15 +50,100 @@
 };
 
 / {
+  // 100 WPM average inter-key interval is roughly 120ms (500 chars/min ÷ 1000)
   behaviors {
-    alt_gui: alt_gui {
-      compatible = "zmk,behavior-tap-dance";
-      #binding-cells = <0>;
-      bindings = <&kp LALT>, <&kp LGUI>;
+    tkl: tkl {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <165>;
+      require-prior-idle-ms = <125>;
+      flavor = "balanced";
+      hold-trigger-key-positions = <KEYS_R>;
+    };
 
-      tapping-term-ms = <200>;
+    tkr: tkr {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <165>;
+      require-prior-idle-ms = <125>;
+      flavor = "tap-preferred";
+      hold-trigger-key-positions = <KEYS_L>;
+    };
+
+
+    tkl_spc: tkl_spc {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <165>;
+      require-prior-idle-ms = <125>;
+      flavor = "tap-preferred";
+      hold-trigger-key-positions = <KEYS_R>;
+    };
+
+    tkr_spc: tkr_spc {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <165>;
+      require-prior-idle-ms = <125>;
+      flavor = "tap-preferred";
+      hold-trigger-key-positions = <KEYS_L>;
+    };
+
+
+    tkl_num: tkl_num {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <135>;
+      quick-tap-ms = <165>;
+      flavor = "hold-preferred";
+      hold-trigger-key-positions = <KEYS_R>;
+      hold-trigger-on-release;
+    };
+
+    tkr_sym: tkr_sym {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&mo>, <&kp>;
+      tapping-term-ms = <135>;
+      quick-tap-ms = <165>;
+      flavor = "hold-preferred";
+      hold-trigger-key-positions = <KEYS_L>;
+      hold-trigger-on-release;
+    };
+
+    ht_alt_esc: ht_alt_esc {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <165>;
+      flavor = "hold-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+  };
+
+  alt_gui: alt_gui {
+    compatible = "zmk,behavior-tap-dance";
+    #binding-cells = <0>;
+    bindings = <&kp LALT>, <&kp LGUI>;
+    tapping-term-ms = <165>;
+  };
+
+
+  combos {
+    compatible = "zmk,combos";
+    combo_game {
+      timeout-ms = <50>;
+      key-positions = <36 37>;
+      bindings = <&tog GAME>;
+      layers = <QWERTY GAME>;
     };
   };
 };
-
-
