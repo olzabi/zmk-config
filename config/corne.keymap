@@ -36,12 +36,12 @@
 //    ├──────────┼───┼───┼──────────┼──────────┼─────────┤   ├────────┼──────────┼────────────┼───┼───┼──────┤
 //    │   lsft   │ Z │ X │    C     │    V     │    B    │   │   N    │    M     │     ,      │ . │ / │ esc  │
 //    └──────────┴───┴───┼──────────┼──────────┼─────────┤   ├────────┼──────────┼────────────┼───┴───┴──────┘
-//                       │ &nav_tab │ &num_esc │ &fn_spc │   │ mo_spc │ &sym_ret │ &media_del │
+//                       │ &tab_gui │ &num_esc │ &fn_spc │   │ mo_spc │ &sym_ret │ &media_del │
 //                       └──────────┴──────────┴─────────┘   └────────┴──────────┴────────────┘
   &alt_gui    &kp Q   &kp W   &kp E      &kp R      &kp T         &kp Y     &kp U      &kp I        &kp O     &kp P      &kp BSPC
   &kp LCTRL   &kp A   &kp S   &kp D      &kp F      &kp G         &kp H     &kp J      &kp K        &kp L     &kp SEMI   &kp SQT
   &kp LSHFT   &kp Z   &kp X   &kp C      &kp V      &kp B         &kp N     &kp M      &kp COMMA    &kp DOT   &kp FSLH   &kp ESC
-                              &nav_tab   &num_esc   &fn_spc       &mo_spc   &sym_ret   &media_del
+                              &tab_gui   &num_esc   &fn_spc       &mo_spc   &sym_ret   &media_del
             >;
         };
 
@@ -55,12 +55,12 @@
 //    ├──────────┼───┼───┼──────────┼─────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
 //    │          │ Z │ X │    C     │      V      │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
 //    └──────────┴───┴───┼──────────┼─────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
-//                       │ &gam_nav │ mo GAME_NUM │ spc │   │     │     │     │
+//                       │          │ mo GAME_NUM │ spc │   │     │     │     │
 //                       └──────────┴─────────────┴─────┘   └─────┴─────┴─────┘
   &alt_esc   &kp Q   &kp W   &kp E      &kp R          &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
   &trans     &kp A   &kp S   &kp D      &kp F          &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &trans
   &trans     &kp Z   &kp X   &kp C      &kp V          &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                             &gam_nav   &mo GAME_NUM   &kp SPACE       &trans   &trans   &trans
+                             &trans     &mo GAME_NUM   &kp SPACE       &trans   &trans   &trans
             >;
         };
 
@@ -178,42 +178,5 @@
             >;
         };
 
-        nav {
-            display-name = "Nav";
-            bindings = <
-//    ┌───────────┬─────┬───────────────┬───────────────┬─────────┬───────────────┐   ┌─────┬─────────────────┬───────────┬─────┬──────────────────┬──────────────────┐
-//    │ lgui(tab) │     │               │    lgui(E)    │         │ lsft(lctl(T)) │   │     │                 │           │     │ lctl(lgui(left)) │ lctl(lgui(rght)) │
-//    ├───────────┼─────┼───────────────┼───────────────┼─────────┼───────────────┤   ├─────┼─────────────────┼───────────┼─────┼──────────────────┼──────────────────┤
-//    │           │     │ lsft(lgui(S)) │ lsft(lgui(D)) │         │               │   │     │ lctl(lsft(tab)) │ lctl(tab) │     │                  │                  │
-//    ├───────────┼─────┼───────────────┼───────────────┼─────────┼───────────────┤   ├─────┼─────────────────┼───────────┼─────┼──────────────────┼──────────────────┤
-//    │           │     │               │ lsft(lctl(C)) │ lgui(V) │               │   │     │                 │           │     │                  │                  │
-//    └───────────┴─────┴───────────────┼───────────────┼─────────┼───────────────┤   ├─────┼─────────────────┼───────────┼─────┴──────────────────┴──────────────────┘
-//                                      │               │  lgui   │               │   │     │                 │           │
-//                                      └───────────────┴─────────┴───────────────┘   └─────┴─────────────────┴───────────┘
-  &kp LG(TAB)   &trans   &trans          &kp LG(E)       &trans      &kp LS(LC(T))       &trans   &trans            &trans        &trans   &kp LC(LG(LEFT))   &kp LC(LG(RIGHT))
-  &trans        &trans   &kp LS(LG(S))   &kp LS(LG(D))   &trans      &trans              &trans   &kp LC(LS(TAB))   &kp LC(TAB)   &trans   &trans             &trans
-  &trans        &trans   &trans          &kp LS(LC(C))   &kp LG(V)   &trans              &trans   &trans            &trans        &trans   &trans             &trans
-                                         &trans          &kp LGUI    &trans              &trans   &trans            &trans
-            >;
-        };
-
-        game_nav {
-            display-name = "Game Nav";
-            bindings = <
-//    ┌───────────┬───────────────┬───────────────┬───────────────┬───────────────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-//    │ lgui(tab) │ lsft(lctl(Q)) │ lsft(lctl(W)) │ lsft(lctl(E)) │ lsft(lctl(R)) │     │   │     │     │     │     │     │     │
-//    ├───────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │    ent    │               │               │               │               │     │   │     │     │     │     │     │     │
-//    ├───────────┼───────────────┼───────────────┼───────────────┼───────────────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-//    │           │ lsft(lctl(~)) │               │               │               │     │   │     │     │     │     │     │     │
-//    └───────────┴───────────────┴───────────────┼───────────────┼───────────────┼─────┤   ├─────┼─────┼─────┼─────┴─────┴─────┘
-//                                                │               │               │     │   │     │     │     │
-//                                                └───────────────┴───────────────┴─────┘   └─────┴─────┴─────┘
-  &kp LG(TAB)   &kp LS(LC(Q))       &kp LS(LC(W))   &kp LS(LC(E))   &kp LS(LC(R))   &trans       &trans   &trans   &trans   &trans   &trans   &trans
-  &kp RET       &trans              &trans          &trans          &trans          &trans       &trans   &trans   &trans   &trans   &trans   &trans
-  &trans        &kp LS(LC(TILDE))   &trans          &trans          &trans          &trans       &trans   &trans   &trans   &trans   &trans   &trans
-                                                    &trans          &trans          &trans       &trans   &trans   &trans
-            >;
-        };
     };
 };

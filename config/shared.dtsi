@@ -20,14 +20,9 @@
 #define MEDIA     5
 #define MOUSE     6
 #define SYM       7
-#define NAV       8
-#define GAME_NAV  9
-
 #define alt_esc   ht_alt_esc LALT     ESC
-#define nav_tab   tkl        NAV      TAB
 #define fn_spc    tkl_spc    FN       SPACE
 #define num_esc   tkl_num    NUM      ESC
-#define gam_nav   tkl        GAME_NAV TAB
 #define mo_spc    tkr_spc    MOUSE    SPACE
 #define sym_ret   tkr_sym    SYM      RET
 #define media_del tkr        MEDIA    DEL
@@ -113,17 +108,18 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
-      tapping-term-ms = <135>;
+      tapping-term-ms = <185>;
       quick-tap-ms = <165>;
       flavor = "hold-preferred";
       hold-trigger-key-positions = <KEYS_L>;
       hold-trigger-on-release;
     };
 
+
     ht_alt_esc: ht_alt_esc {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      tapping-term-ms = <165>;
+      tapping-term-ms = <150>;
       flavor = "hold-preferred";
       bindings = <&kp>, <&kp>;
     };
@@ -135,6 +131,14 @@
     bindings = <&kp LALT>, <&kp LGUI>;
     tapping-term-ms = <165>;
   };
+
+  tab_gui: tab_gui {
+    compatible = "zmk,behavior-tap-dance";
+    #binding-cells = <0>;
+    bindings = <&kp TAB>, <&kp LGUI>;
+    tapping-term-ms = <220>;
+  };
+
 
 
   combos {
