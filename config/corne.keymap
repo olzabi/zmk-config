@@ -48,19 +48,19 @@
         game {
             display-name = "Game";
             bindings = <
-//    ┌──────────────┬───┬───┬──────────┬─────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
-//    │ &game_fn_esc │ Q │ W │    E     │      R      │  T  │   │  Y  │  U  │  I  │ O │ P │      │
-//    ├──────────────┼───┼───┼──────────┼─────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │              │ A │ S │    D     │      F      │  G  │   │  H  │  J  │  K  │ L │ ; │      │
-//    ├──────────────┼───┼───┼──────────┼─────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │              │ Z │ X │    C     │      V      │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
-//    └──────────────┴───┴───┼──────────┼─────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
-//                           │ &alt_tab │ mo GAME_NUM │ spc │   │     │     │     │
-//                           └──────────┴─────────────┴─────┘   └─────┴─────┴─────┘
-  &game_fn_esc   &kp Q   &kp W   &kp E      &kp R          &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
-  &trans         &kp A   &kp S   &kp D      &kp F          &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &trans
-  &trans         &kp Z   &kp X   &kp C      &kp V          &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                                 &alt_tab   &mo GAME_NUM   &kp SPACE       &trans   &trans   &trans
+//    ┌──────────────┬───┬───┬──────────┬─────────────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
+//    │ &game_fn_esc │ Q │ W │    E     │          R          │  T  │   │  Y  │  U  │  I  │ O │ P │      │
+//    ├──────────────┼───┼───┼──────────┼─────────────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │              │ A │ S │    D     │          F          │  G  │   │  H  │  J  │  K  │ L │ ; │      │
+//    ├──────────────┼───┼───┼──────────┼─────────────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │              │ Z │ X │    C     │          V          │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
+//    └──────────────┴───┴───┼──────────┼─────────────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
+//                           │ &alt_tab │ &ht_game_num_sqt GAME_NUM ' │ spc │   │     │     │     │
+//                           └──────────┴─────────────────────┴─────┘   └─────┴─────┴─────┘
+  &game_fn_esc   &kp Q   &kp W   &kp E      &kp R                   &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
+  &trans         &kp A   &kp S   &kp D      &kp F                   &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &trans
+  &trans         &kp Z   &kp X   &kp C      &kp V                   &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                                 &alt_tab   &ht_game_num_sqt GAME_NUM SQT   &kp SPACE       &trans   &trans   &trans
             >;
         };
 
@@ -72,13 +72,13 @@
 //    ├─────┼────┼────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
 //    │ ent │ 6  │ 7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │ del │     │
 //    ├─────┼────┼────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │     │ f4 │ f5 │ f6  │ f7  │ f8  │   │      │      │     │      │     │     │
+//    │ esc │ f4 │ f5 │ f6  │ f7  │ f8  │   │      │      │     │      │     │     │
 //    └─────┴────┴────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
 //                    │     │     │     │   │      │      │     │
 //                    └─────┴─────┴─────┘   └──────┴──────┴─────┘
   &kp TILDE   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
   &kp RET     &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &trans      &kp F4   &kp F5   &kp F6   &kp F7   &kp F8       &trans     &trans     &trans   &trans      &trans    &trans
+  &kp ESC     &kp F4   &kp F5   &kp F6   &kp F7   &kp F8       &trans     &trans     &trans   &trans      &trans    &trans
                                 &trans   &trans   &trans       &trans     &trans     &trans
             >;
         };
