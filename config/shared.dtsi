@@ -20,10 +20,7 @@
 #define MEDIA     5
 #define MOUSE     6
 #define SYM       7
-#define GAME_FN   8
-
-#define game_fn_esc ht_game_fn_esc GAME_FN ESC
-#define alt_tab   ht_alt_tab LALT     TAB
+#define alt_esc   ht_alt_esc LALT     ESC
 #define fn_spc    tkl_spc    FN       SPACE
 #define num_esc   tkl_num    NUM      ESC
 #define mo_spc    tkr_spc    MOUSE    SPACE
@@ -111,36 +108,20 @@
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
-      tapping-term-ms = <185>;
+      tapping-term-ms = <200>;
       quick-tap-ms = <165>;
       flavor = "hold-preferred";
       hold-trigger-key-positions = <KEYS_L>;
       hold-trigger-on-release;
     };
 
-
-    ht_game_fn_esc: ht_game_fn_esc {
+    ht_alt_esc: ht_alt_esc {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       tapping-term-ms = <150>;
-      flavor = "hold-preferred";
-      bindings = <&mo>, <&kp>;
-    };
-
-    ht_alt_tab: ht_alt_tab {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
       flavor = "hold-preferred";
       bindings = <&kp>, <&kp>;
-    };
-
-    ht_game_num_sqt: ht_game_num_sqt {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      tapping-term-ms = <150>;
-      flavor = "hold-preferred";
-      bindings = <&mo>, <&kp>;
     };
   };
 
