@@ -22,13 +22,13 @@
 #define MOUSE     7
 #define SYM       8
 
-#define alt_esc      ht_alt_esc    LALT     ESC
-#define fn_spc       tkl_spc       FN       SPACE
-#define num_esc      tkl_num       NUM      ESC
-#define game_num_esc tkl_game_num GAME_NUM ESC
-#define mo_bspc      tkr           MOUSE    BSPC
-#define sym_ret   tkr_sym    SYM      RET
-#define media_del tkr        MEDIA    DEL
+#define task_view  mt LALT LG(TAB)
+#define fn_spc     tkl_spc       FN       SPACE
+#define num_esc    tkl_num       NUM      ESC
+#define g_num_esc  tkl_game_num  GAME_NUM ESC
+#define mo_ret     tkr           MOUSE    RET
+#define sym_bspc   tkr_sym       SYM      BSPC
+#define media_del  tkr           MEDIA    DEL
 
 #define HOLD_TAP_BASE \
     compatible = "zmk,behavior-hold-tap"; \
@@ -106,13 +106,6 @@
       flavor = "hold-preferred";
       bindings = <&kp>, <&kp>;
     };
-  };
-
-  td_alt_gui: td_alt_gui {
-    compatible = "zmk,behavior-tap-dance";
-    #binding-cells = <0>;
-    bindings = <&kp LA(TAB)>, <&kp LA(LGUI)>;
-    tapping-term-ms = <145>;
   };
 
   combos {

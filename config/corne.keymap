@@ -29,19 +29,19 @@
         qwerty {
             display-name = "Default";
             bindings = <
-//    ┌──────┬───┬───┬──────┬──────────┬─────────┐   ┌─────────┬──────────┬────────────┬───┬───┬─────┐
-//    │ tab  │ Q │ W │  E   │    R     │    T    │   │    Y    │    U     │     I      │ O │ P │  [  │
-//    ├──────┼───┼───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┼───┼─────┤
-//    │ lctl │ A │ S │  D   │    F     │    G    │   │    H    │    J     │     K      │ L │ ; │  '  │
-//    ├──────┼───┼───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┼───┼─────┤
-//    │ lalt │ Z │ X │  C   │    V     │    B    │   │    N    │    M     │     ,      │ . │ / │ esc │
-//    └──────┴───┴───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┴───┴─────┘
-//                   │ lsft │ &num_esc │ &fn_spc │   │ mo_bspc │ &sym_ret │ &media_del │
-//                   └──────┴──────────┴─────────┘   └─────────┴──────────┴────────────┘
-  &kp TAB     &kp Q   &kp W   &kp E       &kp R      &kp T         &kp Y      &kp U      &kp I        &kp O     &kp P      &kp LBKT
-  &kp LCTRL   &kp A   &kp S   &kp D       &kp F      &kp G         &kp H      &kp J      &kp K        &kp L     &kp SEMI   &kp SQT
-  &kp LALT    &kp Z   &kp X   &kp C       &kp V      &kp B         &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH   &kp ESC
-                              &kp LSHFT   &num_esc   &fn_spc       &mo_bspc   &sym_ret   &media_del
+//    ┌──────┬───┬───┬────────────┬──────────┬─────────┐   ┌────────┬───────────┬────────────┬───┬───┬─────┐
+//    │ tab  │ Q │ W │     E      │    R     │    T    │   │   Y    │     U     │     I      │ O │ P │  [  │
+//    ├──────┼───┼───┼────────────┼──────────┼─────────┤   ├────────┼───────────┼────────────┼───┼───┼─────┤
+//    │ lctl │ A │ S │     D      │    F     │    G    │   │   H    │     J     │     K      │ L │ ; │  '  │
+//    ├──────┼───┼───┼────────────┼──────────┼─────────┤   ├────────┼───────────┼────────────┼───┼───┼─────┤
+//    │ lsft │ Z │ X │     C      │    V     │    B    │   │   N    │     M     │     ,      │ . │ / │ esc │
+//    └──────┴───┴───┼────────────┼──────────┼─────────┤   ├────────┼───────────┼────────────┼───┴───┴─────┘
+//                   │ &task_view │ &num_esc │ &fn_spc │   │ mo_ret │ &sym_bspc │ &media_del │
+//                   └────────────┴──────────┴─────────┘   └────────┴───────────┴────────────┘
+  &kp TAB     &kp Q   &kp W   &kp E        &kp R      &kp T         &kp Y     &kp U       &kp I        &kp O     &kp P      &kp LBKT
+  &kp LCTRL   &kp A   &kp S   &kp D        &kp F      &kp G         &kp H     &kp J       &kp K        &kp L     &kp SEMI   &kp SQT
+  &kp LSHFT   &kp Z   &kp X   &kp C        &kp V      &kp B         &kp N     &kp M       &kp COMMA    &kp DOT   &kp FSLH   &kp ESC
+                              &task_view   &num_esc   &fn_spc       &mo_ret   &sym_bspc   &media_del
             >;
         };
 
@@ -49,7 +49,7 @@
             display-name = "Colemak-DH";
             bindings = <
 //    ┌─────┬───┬───┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
-//    │ tab │ Q │ W │  F  │  P  │  B  │   │  J  │  L  │  U  │ Y │ ; │     │
+//    │     │ Q │ W │  F  │  P  │  B  │   │  J  │  L  │  U  │ Y │ ; │     │
 //    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
 //    │     │ A │ R │  S  │  T  │  G  │   │  M  │  N  │  E  │ I │ O │     │
 //    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
@@ -57,67 +57,67 @@
 //    └─────┴───┴───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
 //                  │     │     │     │   │     │     │     │
 //                  └─────┴─────┴─────┘   └─────┴─────┴─────┘
-  &kp TAB   &kp Q   &kp W   &kp F    &kp P    &kp B        &kp J    &kp L    &kp U       &kp Y     &kp SEMI   &trans
-  &trans    &kp A   &kp R   &kp S    &kp T    &kp G        &kp M    &kp N    &kp E       &kp I     &kp O      &trans
-  &trans    &kp Z   &kp X   &kp C    &kp D    &kp V        &kp K    &kp H    &kp COMMA   &kp DOT   &kp FSLH   &trans
-                            &trans   &trans   &trans       &trans   &trans   &trans
+  &trans   &kp Q   &kp W   &kp F    &kp P    &kp B        &kp J    &kp L    &kp U       &kp Y     &kp SEMI   &trans
+  &trans   &kp A   &kp R   &kp S    &kp T    &kp G        &kp M    &kp N    &kp E       &kp I     &kp O      &trans
+  &trans   &kp Z   &kp X   &kp C    &kp D    &kp V        &kp K    &kp H    &kp COMMA   &kp DOT   &kp FSLH   &trans
+                           &trans   &trans   &trans       &trans   &trans   &trans
             >;
         };
 
         game {
             display-name = "Game";
             bindings = <
-//    ┌─────┬───┬───┬─────┬───────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
-//    │     │ Q │ W │  E  │       R       │  T  │   │  Y  │  U  │  I  │ O │ P │      │
-//    ├─────┼───┼───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │     │ A │ S │  D  │       F       │  G  │   │  H  │  J  │  K  │ L │ ; │  '   │
-//    ├─────┼───┼───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │     │ Z │ X │  C  │       V       │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
-//    └─────┴───┴───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
-//                  │     │ &game_num_esc │ spc │   │     │     │     │
-//                  └─────┴───────────────┴─────┘   └─────┴─────┴─────┘
-  &trans   &kp Q   &kp W   &kp E    &kp R           &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
-  &trans   &kp A   &kp S   &kp D    &kp F           &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp SQT
-  &trans   &kp Z   &kp X   &kp C    &kp V           &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                           &trans   &game_num_esc   &kp SPACE       &trans   &trans   &trans
+//    ┌─────┬───┬───┬─────┬────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
+//    │     │ Q │ W │  E  │     R      │  T  │   │  Y  │  U  │  I  │ O │ P │      │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │     │ A │ S │  D  │     F      │  G  │   │  H  │  J  │  K  │ L │ ; │  '   │
+//    ├─────┼───┼───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │     │ Z │ X │  C  │     V      │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
+//    └─────┴───┴───┼─────┼────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
+//                  │     │ &g_num_esc │ spc │   │     │     │     │
+//                  └─────┴────────────┴─────┘   └─────┴─────┴─────┘
+  &trans   &kp Q   &kp W   &kp E    &kp R        &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
+  &trans   &kp A   &kp S   &kp D    &kp F        &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp SQT
+  &trans   &kp Z   &kp X   &kp C    &kp V        &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                           &trans   &g_num_esc   &kp SPACE       &trans   &trans   &trans
             >;
         };
 
         game_num {
             display-name = "Game Num";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │  ~  │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ ent │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │ del │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │     │     │     │     │     │     │   │      │      │     │      │     │     │
-//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                      │     │     │     │   │      │      │     │
-//                      └─────┴─────┴─────┘   └──────┴──────┴─────┘
-  &kp TILDE   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
-  &kp RET     &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &trans      &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans    &trans
-                                &trans   &trans   &trans       &trans     &trans     &trans
+//    ┌───────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │ lctl(tab) │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
+//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │    ent    │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │ del │     │
+//    ├───────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     ~     │     │     │     │     │     │   │      │      │     │      │     │     │
+//    └───────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                            │     │     │     │   │      │      │     │
+//                            └─────┴─────┴─────┘   └──────┴──────┴─────┘
+  &kp LC(TAB)   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
+  &kp RET       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
+  &kp TILDE     &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans    &trans
+                                  &trans   &trans   &trans       &trans     &trans     &trans
             >;
         };
 
         num {
             display-name = "Numbers";
             bindings = <
-//    ┌─────────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │ &td_alt_gui │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │     ent     │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │     │     │
-//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │             │     │     │     │     │     │   │      │      │     │      │     │     │
-//    └─────────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                              │     │     │     │   │      │      │     │
-//                              └─────┴─────┴─────┘   └──────┴──────┴─────┘
-  &td_alt_gui   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans   &trans
-  &kp RET       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans   &trans
-  &trans        &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans   &trans
-                                  &trans   &trans   &trans       &trans     &trans     &trans
+//    ┌───────────┬─────┬─────┬──────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │ lctl(tab) │  1  │  2  │  3   │  4  │  5  │   │      │      │     │      │     │     │
+//    ├───────────┼─────┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │    ent    │  6  │  7  │  8   │  9  │  0  │   │ left │ down │ up  │ rght │     │     │
+//    ├───────────┼─────┼─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │           │     │     │      │     │     │   │      │      │     │      │     │     │
+//    └───────────┴─────┴─────┼──────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                            │ lgui │     │     │   │      │      │     │
+//                            └──────┴─────┴─────┘   └──────┴──────┴─────┘
+  &kp LC(TAB)   &kp N1   &kp N2   &kp N3     &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans   &trans
+  &kp RET       &kp N6   &kp N7   &kp N8     &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans   &trans
+  &trans        &trans   &trans   &trans     &trans   &trans       &trans     &trans     &trans   &trans      &trans   &trans
+                                  &kp LGUI   &trans   &trans       &trans     &trans     &trans
             >;
         };
 
