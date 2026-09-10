@@ -13,87 +13,70 @@
 
 // layers
 #define QWERTY    0
-#define GAME      1
-#define GAME_NUM  2
-#define NUM       3
-#define FN        4
-#define MEDIA     5
-#define MOUSE     6
-#define SYM       7
-#define alt_esc   ht_alt_esc LALT     ESC
-#define fn_spc    tkl_spc    FN       SPACE
-#define num_esc   tkl_num    NUM      ESC
-#define mo_spc    tkr_spc    MOUSE    SPACE
+#define COLEMAK   1
+#define GAME      2
+#define GAME_NUM  3
+#define NUM       4
+#define FN        5
+#define MEDIA     6
+#define MOUSE     7
+#define SYM       8
+
+#define alt_esc      ht_alt_esc    LALT     ESC
+#define fn_spc       tkl_spc       FN       SPACE
+#define num_esc      tkl_num       NUM      ESC
+#define game_num_esc tkl_game_num GAME_NUM ESC
+#define mo_bspc      tkr           MOUSE    BSPC
 #define sym_ret   tkr_sym    SYM      RET
 #define media_del tkr        MEDIA    DEL
 
+#define HOLD_TAP_BASE \
+    compatible = "zmk,behavior-hold-tap"; \
+    #binding-cells = <2>; \
+    bindings = <&mo>, <&kp>; \
+    tapping-term-ms = <165>; \
+    quick-tap-ms = <145>; \
+    require-prior-idle-ms = <100>;
+
+
 &mt {
   tapping-term-ms = <220>;
-  quick-tap-ms = <165>;
-  flavor = "balanced";
-};
-
-&lt {
-  tapping-term-ms = <300>;
-  quick-tap-ms = <0>;
-  flavor = "tap-preferred";
-};
-
-&sk {
-  release-after-ms = <500>;
-  quick-release;
+  quick-tap-ms = <125>;
+  require-prior-idle-ms = <150>;
 };
 
 / {
-  // 100 WPM average inter-key interval is roughly 120ms (500 chars/min ÷ 1000)
   behaviors {
     tkl: tkl {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&mo>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <165>;
-      require-prior-idle-ms = <125>;
+      HOLD_TAP_BASE
       flavor = "balanced";
       hold-trigger-key-positions = <KEYS_R>;
     };
 
     tkr: tkr {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&mo>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <165>;
-      require-prior-idle-ms = <125>;
+      HOLD_TAP_BASE
       flavor = "tap-preferred";
       hold-trigger-key-positions = <KEYS_L>;
     };
 
-
     tkl_spc: tkl_spc {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&mo>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <165>;
-      require-prior-idle-ms = <125>;
+      HOLD_TAP_BASE
       flavor = "tap-preferred";
       hold-trigger-key-positions = <KEYS_R>;
     };
 
-    tkr_spc: tkr_spc {
+    tkl_num: tkl_num {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
-      tapping-term-ms = <185>;
+      tapping-term-ms = <135>;
       quick-tap-ms = <165>;
-      require-prior-idle-ms = <125>;
-      flavor = "tap-preferred";
-      hold-trigger-key-positions = <KEYS_L>;
+      flavor = "hold-preferred";
+      hold-trigger-key-positions = <KEYS_R>;
+      hold-trigger-on-release;
     };
 
-
-    tkl_num: tkl_num {
+    tkl_game_num: tkl_game_num {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       bindings = <&mo>, <&kp>;
@@ -125,27 +108,18 @@
     };
   };
 
-  alt_gui: alt_gui {
+  td_alt_gui: td_alt_gui {
     compatible = "zmk,behavior-tap-dance";
     #binding-cells = <0>;
-    bindings = <&kp LALT>, <&kp LGUI>;
-    tapping-term-ms = <165>;
+    bindings = <&kp LA(TAB)>, <&kp LA(LGUI)>;
+    tapping-term-ms = <145>;
   };
-
-  tab_gui: tab_gui {
-    compatible = "zmk,behavior-tap-dance";
-    #binding-cells = <0>;
-    bindings = <&kp TAB>, <&kp LGUI>;
-    tapping-term-ms = <220>;
-  };
-
-
 
   combos {
     compatible = "zmk,combos";
     combo_game {
       timeout-ms = <50>;
-      key-positions = <36 37>;
+      key-positions = <37 38>;
       bindings = <&tog GAME>;
       layers = <QWERTY GAME>;
     };

@@ -21,64 +21,83 @@
 ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
             ╰────────────╯ ╰────────────╯
 */
-
 / {
+
     keymap {
         compatible = "zmk,keymap";
 
         qwerty {
             display-name = "Default";
             bindings = <
-//    ┌──────────┬───┬───┬──────────┬──────────┬─────────┐   ┌────────┬──────────┬────────────┬───┬───┬──────┐
-//    │ &alt_gui │ Q │ W │    E     │    R     │    T    │   │   Y    │    U     │     I      │ O │ P │ bspc │
-//    ├──────────┼───┼───┼──────────┼──────────┼─────────┤   ├────────┼──────────┼────────────┼───┼───┼──────┤
-//    │   lctl   │ A │ S │    D     │    F     │    G    │   │   H    │    J     │     K      │ L │ ; │  '   │
-//    ├──────────┼───┼───┼──────────┼──────────┼─────────┤   ├────────┼──────────┼────────────┼───┼───┼──────┤
-//    │   lsft   │ Z │ X │    C     │    V     │    B    │   │   N    │    M     │     ,      │ . │ / │ esc  │
-//    └──────────┴───┴───┼──────────┼──────────┼─────────┤   ├────────┼──────────┼────────────┼───┴───┴──────┘
-//                       │ &tab_gui │ &num_esc │ &fn_spc │   │ mo_spc │ &sym_ret │ &media_del │
-//                       └──────────┴──────────┴─────────┘   └────────┴──────────┴────────────┘
-  &alt_gui    &kp Q   &kp W   &kp E      &kp R      &kp T         &kp Y     &kp U      &kp I        &kp O     &kp P      &kp BSPC
-  &kp LCTRL   &kp A   &kp S   &kp D      &kp F      &kp G         &kp H     &kp J      &kp K        &kp L     &kp SEMI   &kp SQT
-  &kp LSHFT   &kp Z   &kp X   &kp C      &kp V      &kp B         &kp N     &kp M      &kp COMMA    &kp DOT   &kp FSLH   &kp ESC
-                              &tab_gui   &num_esc   &fn_spc       &mo_spc   &sym_ret   &media_del
+//    ┌──────┬───┬───┬──────┬──────────┬─────────┐   ┌─────────┬──────────┬────────────┬───┬───┬─────┐
+//    │ tab  │ Q │ W │  E   │    R     │    T    │   │    Y    │    U     │     I      │ O │ P │  [  │
+//    ├──────┼───┼───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┼───┼─────┤
+//    │ lctl │ A │ S │  D   │    F     │    G    │   │    H    │    J     │     K      │ L │ ; │  '  │
+//    ├──────┼───┼───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┼───┼─────┤
+//    │ lalt │ Z │ X │  C   │    V     │    B    │   │    N    │    M     │     ,      │ . │ / │ esc │
+//    └──────┴───┴───┼──────┼──────────┼─────────┤   ├─────────┼──────────┼────────────┼───┴───┴─────┘
+//                   │ lsft │ &num_esc │ &fn_spc │   │ mo_bspc │ &sym_ret │ &media_del │
+//                   └──────┴──────────┴─────────┘   └─────────┴──────────┴────────────┘
+  &kp TAB     &kp Q   &kp W   &kp E       &kp R      &kp T         &kp Y      &kp U      &kp I        &kp O     &kp P      &kp LBKT
+  &kp LCTRL   &kp A   &kp S   &kp D       &kp F      &kp G         &kp H      &kp J      &kp K        &kp L     &kp SEMI   &kp SQT
+  &kp LALT    &kp Z   &kp X   &kp C       &kp V      &kp B         &kp N      &kp M      &kp COMMA    &kp DOT   &kp FSLH   &kp ESC
+                              &kp LSHFT   &num_esc   &fn_spc       &mo_bspc   &sym_ret   &media_del
+            >;
+        };
+
+        colemak {
+            display-name = "Colemak-DH";
+            bindings = <
+//    ┌─────┬───┬───┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
+//    │ tab │ Q │ W │  F  │  P  │  B  │   │  J  │  L  │  U  │ Y │ ; │     │
+//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
+//    │     │ A │ R │  S  │  T  │  G  │   │  M  │  N  │  E  │ I │ O │     │
+//    ├─────┼───┼───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
+//    │     │ Z │ X │  C  │  D  │  V  │   │  K  │  H  │  ,  │ . │ / │     │
+//    └─────┴───┴───┼─────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
+//                  │     │     │     │   │     │     │     │
+//                  └─────┴─────┴─────┘   └─────┴─────┴─────┘
+  &kp TAB   &kp Q   &kp W   &kp F    &kp P    &kp B        &kp J    &kp L    &kp U       &kp Y     &kp SEMI   &trans
+  &trans    &kp A   &kp R   &kp S    &kp T    &kp G        &kp M    &kp N    &kp E       &kp I     &kp O      &trans
+  &trans    &kp Z   &kp X   &kp C    &kp D    &kp V        &kp K    &kp H    &kp COMMA   &kp DOT   &kp FSLH   &trans
+                            &trans   &trans   &trans       &trans   &trans   &trans
             >;
         };
 
         game {
             display-name = "Game";
             bindings = <
-//    ┌─────┬───┬───┬─────────────┬──────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
-//    │ tab │ Q │ W │      E      │    R     │  T  │   │  Y  │  U  │  I  │ O │ P │      │
-//    ├─────┼───┼───┼─────────────┼──────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │     │ A │ S │      D      │    F     │  G  │   │  H  │  J  │  K  │ L │ ; │  '   │
-//    ├─────┼───┼───┼─────────────┼──────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
-//    │     │ Z │ X │      C      │    V     │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
-//    └─────┴───┴───┼─────────────┼──────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
-//                  │ mo GAME_NUM │ &alt_esc │ spc │   │     │     │     │
-//                  └─────────────┴──────────┴─────┘   └─────┴─────┴─────┘
-  &kp TAB   &kp Q   &kp W   &kp E          &kp R      &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
-  &trans    &kp A   &kp S   &kp D          &kp F      &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp SQT
-  &trans    &kp Z   &kp X   &kp C          &kp V      &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
-                            &mo GAME_NUM   &alt_esc   &kp SPACE       &trans   &trans   &trans
+//    ┌─────┬───┬───┬─────┬───────────────┬─────┐   ┌─────┬─────┬─────┬───┬───┬──────┐
+//    │     │ Q │ W │  E  │       R       │  T  │   │  Y  │  U  │  I  │ O │ P │      │
+//    ├─────┼───┼───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │     │ A │ S │  D  │       F       │  G  │   │  H  │  J  │  K  │ L │ ; │  '   │
+//    ├─────┼───┼───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┼───┼──────┤
+//    │     │ Z │ X │  C  │       V       │  B  │   │  N  │  M  │  ,  │ . │ / │ lgui │
+//    └─────┴───┴───┼─────┼───────────────┼─────┤   ├─────┼─────┼─────┼───┴───┴──────┘
+//                  │     │ &game_num_esc │ spc │   │     │     │     │
+//                  └─────┴───────────────┴─────┘   └─────┴─────┴─────┘
+  &trans   &kp Q   &kp W   &kp E    &kp R           &kp T           &kp Y    &kp U    &kp I       &kp O     &kp P      &trans
+  &trans   &kp A   &kp S   &kp D    &kp F           &kp G           &kp H    &kp J    &kp K       &kp L     &kp SEMI   &kp SQT
+  &trans   &kp Z   &kp X   &kp C    &kp V           &kp B           &kp N    &kp M    &kp COMMA   &kp DOT   &kp FSLH   &kp LGUI
+                           &trans   &game_num_esc   &kp SPACE       &trans   &trans   &trans
             >;
         };
 
         game_num {
             display-name = "Game Num";
             bindings = <
-//    ┌─────┬────┬────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │  ~  │ 1  │ 2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────┼────┼────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ ent │ 6  │ 7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │ del │     │
-//    ├─────┼────┼────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │     │ f4 │ f5 │ f6  │ f7  │ f8  │   │      │      │     │      │     │     │
-//    └─────┴────┴────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                    │     │     │     │   │      │      │     │
-//                    └─────┴─────┴─────┘   └──────┴──────┴─────┘
+//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │  ~  │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │ ent │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │ del │     │
+//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     │     │     │     │     │     │   │      │      │     │      │     │     │
+//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                      │     │     │     │   │      │      │     │
+//                      └─────┴─────┴─────┘   └──────┴──────┴─────┘
   &kp TILDE   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans    &trans
   &kp RET     &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp DEL   &trans
-  &trans      &kp F4   &kp F5   &kp F6   &kp F7   &kp F8       &trans     &trans     &trans   &trans      &trans    &trans
+  &trans      &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans    &trans
                                 &trans   &trans   &trans       &trans     &trans     &trans
             >;
         };
@@ -86,19 +105,19 @@
         num {
             display-name = "Numbers";
             bindings = <
-//    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
-//    │     │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │ ent │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │     │     │
-//    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
-//    │     │     │     │     │     │     │   │      │      │     │      │     │     │
-//    └─────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
-//                      │     │     │     │   │      │      │     │
-//                      └─────┴─────┴─────┘   └──────┴──────┴─────┘
-  &trans    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans   &trans
-  &kp RET   &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans   &trans
-  &trans    &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans   &trans
-                              &trans   &trans   &trans       &trans     &trans     &trans
+//    ┌─────────────┬─────┬─────┬─────┬─────┬─────┐   ┌──────┬──────┬─────┬──────┬─────┬─────┐
+//    │ &td_alt_gui │  1  │  2  │  3  │  4  │  5  │   │      │      │     │      │     │     │
+//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │     ent     │  6  │  7  │  8  │  9  │  0  │   │ left │ down │ up  │ rght │     │     │
+//    ├─────────────┼─────┼─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┼─────┼─────┤
+//    │             │     │     │     │     │     │   │      │      │     │      │     │     │
+//    └─────────────┴─────┴─────┼─────┼─────┼─────┤   ├──────┼──────┼─────┼──────┴─────┴─────┘
+//                              │     │     │     │   │      │      │     │
+//                              └─────┴─────┴─────┘   └──────┴──────┴─────┘
+  &td_alt_gui   &kp N1   &kp N2   &kp N3   &kp N4   &kp N5       &trans     &trans     &trans   &trans      &trans   &trans
+  &kp RET       &kp N6   &kp N7   &kp N8   &kp N9   &kp N0       &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &trans   &trans
+  &trans        &trans   &trans   &trans   &trans   &trans       &trans     &trans     &trans   &trans      &trans   &trans
+                                  &trans   &trans   &trans       &trans     &trans     &trans
             >;
         };
 
@@ -106,37 +125,37 @@
             display-name = "Func";
             bindings = <
 //    ┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬──────┬─────┬─────┬─────┬─────┐
-//    │     │ f1  │ f2  │ f3  │ f4  │ f5  │   │ f7  │  f8  │ f9  │ f10 │     │     │
+//    │     │ f1  │ f2  │ f3  │ f4  │ f5  │   │ f7  │  f8  │ f9  │ f10 │ f11 │     │
 //    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼──────┼─────┼─────┼─────┼─────┤
-//    │     │ f6  │     │     │ f11 │ f12 │   │     │ home │ end │ ins │     │     │
+//    │     │ f6  │     │     │     │ f12 │   │     │ home │ end │ ins │     │     │
 //    ├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼──────┼─────┼─────┼─────┼─────┤
 //    │     │     │     │     │     │     │   │     │      │     │     │     │     │
 //    └─────┴─────┴─────┼─────┼─────┼─────┤   ├─────┼──────┼─────┼─────┴─────┴─────┘
 //                      │     │     │     │   │     │      │     │
 //                      └─────┴─────┴─────┘   └─────┴──────┴─────┘
-  &trans   &kp F1   &kp F2   &kp F3   &kp F4    &kp F5        &kp F7   &kp F8     &kp F9    &kp F10   &trans   &trans
-  &trans   &kp F6   &trans   &trans   &kp F11   &kp F12       &trans   &kp HOME   &kp END   &kp INS   &trans   &trans
-  &trans   &trans   &trans   &trans   &trans    &trans        &trans   &trans     &trans    &trans    &trans   &trans
-                             &trans   &trans    &trans        &trans   &trans     &trans
+  &trans   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5        &kp F7   &kp F8     &kp F9    &kp F10   &kp F11   &trans
+  &trans   &kp F6   &trans   &trans   &trans   &kp F12       &trans   &kp HOME   &kp END   &kp INS   &trans    &trans
+  &trans   &trans   &trans   &trans   &trans   &trans        &trans   &trans     &trans    &trans    &trans    &trans
+                             &trans   &trans   &trans        &trans   &trans     &trans
             >;
         };
 
         media {
             display-name = "Media";
             bindings = <
-//    ┌──────────┬──────────┬──────────┬──────────┬────────────┬────────┐   ┌──────┬──────┬──────┬─────┬─────┬──────┐
-//    │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │  bt_sel 4  │ bt_clr │   │      │      │      │     │     │ play │
-//    ├──────────┼──────────┼──────────┼──────────┼────────────┼────────┤   ├──────┼──────┼──────┼─────┼─────┼──────┤
-//    │          │          │          │          │            │        │   │      │ vold │ volu │     │     │ next │
-//    ├──────────┼──────────┼──────────┼──────────┼────────────┼────────┤   ├──────┼──────┼──────┼─────┼─────┼──────┤
-//    │          │          │          │          │            │        │   │      │      │      │     │     │ mute │
-//    └──────────┴──────────┴──────────┼──────────┼────────────┼────────┤   ├──────┼──────┼──────┼─────┴─────┴──────┘
-//                                     │          │ &sys_reset │  boot  │   │ boot │      │      │
-//                                     └──────────┴────────────┴────────┘   └──────┴──────┴──────┘
-  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR        &none         &none          &none          &none   &none   &kp C_PLAY
-  &none          &none          &none          &none          &none          &none             &none         &kp C_VOL_DN   &kp C_VOL_UP   &none   &none   &kp C_NEXT
-  &none          &none          &none          &none          &none          &none             &none         &none          &none          &none   &none   &kp C_MUTE
-                                               &none          &sys_reset     &bootloader       &bootloader   &none          &none
+//    ┌──────────┬──────────┬──────────┬──────────┬────────────┬────────┐   ┌─────────────┬─────┬─────┬─────┬──────┬──────┐
+//    │ bt_sel 0 │ bt_sel 1 │ bt_sel 2 │ bt_sel 3 │  bt_sel 4  │ bt_clr │   │ tog COLEMAK │     │     │     │ vold │ play │
+//    ├──────────┼──────────┼──────────┼──────────┼────────────┼────────┤   ├─────────────┼─────┼─────┼─────┼──────┼──────┤
+//    │          │          │          │          │            │        │   │             │     │     │     │ volu │ next │
+//    ├──────────┼──────────┼──────────┼──────────┼────────────┼────────┤   ├─────────────┼─────┼─────┼─────┼──────┼──────┤
+//    │          │          │          │          │            │        │   │             │     │     │     │      │ mute │
+//    └──────────┴──────────┴──────────┼──────────┼────────────┼────────┤   ├─────────────┼─────┼─────┼─────┴──────┴──────┘
+//                                     │          │ &sys_reset │  boot  │   │    boot     │     │     │
+//                                     └──────────┴────────────┴────────┘   └─────────────┴─────┴─────┘
+  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR        &tog COLEMAK   &none   &none   &none   &kp C_VOL_DN   &kp C_PLAY
+  &none          &none          &none          &none          &none          &none             &none          &none   &none   &none   &kp C_VOL_UP   &kp C_NEXT
+  &none          &none          &none          &none          &none          &none             &none          &none   &none   &none   &none          &kp C_MUTE
+                                               &none          &sys_reset     &bootloader       &bootloader    &none   &none
             >;
         };
 
@@ -162,22 +181,21 @@
         sym  {
             display-name = "Symbols";
             bindings = <
-//    ┌─────┬───┬─────┬──────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬─────┐
-//    │     │ ! │  @  │  #   │  $  │  %  │   │     │     │  (  │ ) │ | │     │
-//    ├─────┼───┼─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ ^ │  &  │ kp_* │  <  │  >  │   │     │  -  │  [  │ ] │ = │  `  │
-//    ├─────┼───┼─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼─────┤
-//    │     │ ~ │     │      │     │     │   │     │  +  │  {  │ } │ \ │  _  │
-//    └─────┴───┴─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴─────┘
+//    ┌─────┬───┬─────┬──────┬─────┬─────┐   ┌─────┬─────┬─────┬───┬───┬───┐
+//    │     │ ! │  @  │  #   │  $  │  %  │   │     │     │  <  │ > │ | │ ] │
+//    ├─────┼───┼─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼───┤
+//    │     │ ^ │  &  │ kp_* │     │     │   │     │  -  │  (  │ ) │ = │ ` │
+//    ├─────┼───┼─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┼───┼───┤
+//    │     │ ~ │     │      │     │     │   │     │  +  │  {  │ } │ \ │ _ │
+//    └─────┴───┴─────┼──────┼─────┼─────┤   ├─────┼─────┼─────┼───┴───┴───┘
 //                    │      │     │     │   │     │     │     │
 //                    └──────┴─────┴─────┘   └─────┴─────┴─────┘
-  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR   &kp PRCNT       &trans   &trans      &kp LPAR   &kp RPAR   &kp PIPE    &trans
-  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &kp LT     &kp GT          &trans   &kp MINUS   &kp LBKT   &kp RBKT   &kp EQUAL   &kp GRAVE
+  &trans   &kp EXCL    &kp AT     &kp HASH          &kp DLLR   &kp PRCNT       &trans   &trans      &kp LT     &kp GT     &kp PIPE    &kp RBKT
+  &trans   &kp CARET   &kp AMPS   &kp KP_MULTIPLY   &trans     &trans          &trans   &kp MINUS   &kp LPAR   &kp RPAR   &kp EQUAL   &kp GRAVE
   &trans   &kp TILDE   &trans     &trans            &trans     &trans          &trans   &kp PLUS    &kp LBRC   &kp RBRC   &kp BSLH    &kp UNDER
                                   &trans            &trans     &trans          &trans   &trans      &trans
             >;
         };
-
 
     };
 };
